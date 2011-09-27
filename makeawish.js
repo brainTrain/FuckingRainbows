@@ -20,9 +20,9 @@ window.bookmarklet({
     js  : [''],
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function(){
- 
+        var buttonz =  '<div class="touchadream">RAINBOWZz</div>';
         alert('ahhh rainbow!');
-        $(document).append('<div class="touchadream">RAINBOWZz</div>'); 
+        document.body.appendChild(buttonz); 
 
         $('.touchadream').click( function() {
             $('*').click( function() {
