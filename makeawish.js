@@ -22,8 +22,12 @@ window.bookmarklet({
     ready : function(){
  
         alert('ahhh rainbow!');
-       $('*').click( function() {
-            $(this).toggleClass('catchadream');
+        $(body).append('<div class="touchadream">RAINBOWZz</div>'); 
+
+        $('.touchadream').click( function() {
+            $('*').click( function() {
+                $(this).toggleClass('catchadream');
+            });  
         });  
  
     }
