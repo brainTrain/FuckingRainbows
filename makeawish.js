@@ -16,7 +16,7 @@ window.bookmarklet = function(opts){fullFunc(opts)};
 // These are the styles, scripts and callbacks we include in our bookmarklet:
 window.bookmarklet({
  
-    css : ['http://braintrain.github.com/fuckingrainbows.css'],
+    css : ['http://braintrain.github.com/fuckingrainbows/rainbows.css'],
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function(){
  
