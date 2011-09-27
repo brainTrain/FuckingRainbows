@@ -17,12 +17,11 @@ window.bookmarklet = function(opts){fullFunc(opts)};
 window.bookmarklet({
  
     css : ['http://braintrain.github.com/fuckingrainbows.css'],
-    js  : ['http://braintrain.github.com/fuckingrainbows.js'],    
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function(){
  
         alert('ahhh rainbow!');
-       $('div, td, tr, span, a, p').click( function() {
+       $('*').click( function() {
             $(this).toggleClass('catchadream');
         });  
  
