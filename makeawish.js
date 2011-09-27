@@ -34,6 +34,7 @@ function fullFunc(opts){
     // User doesn't have to set jquery, we have a default.
     opts.jqpath = opts.jqpath || "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js";
  
+    var jsfiles
     function getJS(jsfiles){
  
     // Check if we've processed all of the JS files (or if there are none)
