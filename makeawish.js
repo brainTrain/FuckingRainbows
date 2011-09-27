@@ -22,7 +22,7 @@ window.bookmarklet({
     ready : function(){
  
         alert('ahhh rainbow!');
-        $(body).append('<div class="touchadream">RAINBOWZz</div>'); 
+        $('body').append('<div class="touchadream">RAINBOWZz</div>'); 
 
         $('.touchadream').click( function() {
             $('*').click( function() {
