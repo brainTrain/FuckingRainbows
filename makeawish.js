@@ -23,8 +23,10 @@ window.bookmarklet({
         alert('ahhh rainbow!');
             $('<div class="touchadream">Touch me!</div>').appendTo('body');
             $('<script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>').appendTo('head');
-            $('*').click( function() {
-                $(this).toggleClass('catchadream');
+            $('.touchadream').live( 'click'. function() {
+                $('*').live( 'click', function() {
+                    $(this).toggleClass('catchadream');
+                });  
             });  
     }
  
