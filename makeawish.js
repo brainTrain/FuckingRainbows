@@ -38,7 +38,7 @@ window.bookmarklet({
                 console.log(object);
                     $.ajax( {
                         type: "GET",
-                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + this,
+                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + object,
                         dataType: "http"
     
                     });
