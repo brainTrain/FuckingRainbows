@@ -26,7 +26,7 @@ window.bookmarklet({
             $('<script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>').appendTo('head');
             $('.touchadream').click( function() {
                 $('*').click(function() {
-                        $(this).toggleClass('.catchadream');
+                        $(this).toggleClass('catchadream');
                 });  
             });  
     }
