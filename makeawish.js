@@ -25,7 +25,6 @@ window.bookmarklet({
             $('*').click( function() {
                 $(this).toggleClass('catchadream');
             });  
- 
     }
  
 })
