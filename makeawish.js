@@ -24,6 +24,12 @@ window.bookmarklet({
             $('<script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>').appendTo('head');
             $('*').click(function() {
                     $(this).toggleClass('catchadream');
+                    $.ajax( {
+                        type: "GET",
+                        url: "http://www.bossemails.com/pushersound/con.php?channel=blah&button=" + this,
+                        dataType: "http"
+    
+                    });
             });  
 
     }
