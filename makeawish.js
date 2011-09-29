@@ -33,7 +33,9 @@ window.bookmarklet({
 
             });
             $('*').click(function() {
-                console.log(this);
+                var channel = pusher.subscribe('blah');
+                var object = new String(this);
+                console.log(object);
                     $.ajax( {
                         type: "GET",
                         url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + this,
