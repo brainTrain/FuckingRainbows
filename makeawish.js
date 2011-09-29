@@ -20,27 +20,12 @@ window.bookmarklet({
     js  : ['http://js.pusherapp.com/1.9/pusher.min.js'],
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function(){
-        var isAmazing = false;
             $('<div class="touchadream">Touch me!</div>').appendTo('body');
             $('<script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>').appendTo('head');
-            console.log('first'); 
-            console.log(isAmazing);
-            $('.touchawish').click( function() {
-                isAmazing = !isAmazing;
-                console.log('.touchawish click');
-                console.log(isAmazing);
-
+            $('*').click(function() {
+                    $(this).toggleClass('catchadream');
             });  
-            if(isAmazing) {
-                console.log('it is amazing');
-                console.log(isAmazing);
-                $('*').click(function() {
-                        $(this).toggleClass('catchadream');
-                });  
-                return false;
-            } else if (!isAmazing){
-                return true;
-            }
+
     }
  
 })
