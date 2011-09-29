@@ -27,18 +27,18 @@ window.bookmarklet({
             var channel = pusher.subscribe('blah');
 
             channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
-
+             
                 $(data).toggleClass('catchadream');
 
 
             });
             $('*').click(function() {
                 $(this).toggleClass('catchadream');
-                
+                var content = this;
                 console.log(object);
                     $.ajax( {
                         type: "GET",
-                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + this,
+                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + content,
                         dataType: "http"
     
                     });
