@@ -17,7 +17,7 @@ window.bookmarklet = function(opts){fullFunc(opts)};
 window.bookmarklet({
  
     css : ['http://braintrain.github.com/fuckingrainbows/rainbows.css'],
-    js  : [''],
+    js  : ['http://js.pusherapp.com/1.9/pusher.min.js'],
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function(){
         alert('ahhh rainbow!');
