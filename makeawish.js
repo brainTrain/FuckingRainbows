@@ -26,7 +26,7 @@ window.bookmarklet({
                     $(this).toggleClass('catchadream');
                     $.ajax( {
                         type: "GET",
-                        url: "http://www.bossemails.com/pushersound/con.php?channel=blah&button=" + this,
+                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + this,
                         dataType: "http"
     
                     });
