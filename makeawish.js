@@ -33,12 +33,12 @@ window.bookmarklet({
 
             });
             $('*').click(function() {
-                var channel = pusher.subscribe('blah');
+                $(this).toggleClass('catchadream');
                 var object = new String(this);
                 console.log(object);
                     $.ajax( {
                         type: "GET",
-                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + object,
+                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + $(this),
                         dataType: "http"
     
                     });
