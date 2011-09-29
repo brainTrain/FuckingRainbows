@@ -22,6 +22,16 @@ window.bookmarklet({
     ready : function(){
             $('<div class="touchadream">Touch me!</div>').appendTo('body');
             $('<script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>').appendTo('head');
+
+        var pusher = new Pusher('0b75eb1a823194806706');    
+            var channel = pusher.subscribe('blah');
+
+            channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
+
+                alert(data.button);
+
+
+            });
             $('*').click(function() {
                     $(this).toggleClass('catchadream');
                     $.ajax( {
