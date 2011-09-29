@@ -25,13 +25,8 @@ window.bookmarklet({
             $('<div class="touchadream">Touch me!</div>').appendTo('body');
             $('<script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>').appendTo('head');
             $('.touchadream').click( function() {
-                $('*').click(function() {
-                    isAmazing = !isAmazing;
-                    if(!isAmazing) {
-                        return false;
+                $('*').toggle(function() {
                         $(this).toggleClass('.catchadream');
-                    }
-                    return true;
                 });  
             });  
     }
