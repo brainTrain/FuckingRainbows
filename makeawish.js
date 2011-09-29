@@ -25,7 +25,7 @@ window.bookmarklet({
             $('*').click( function() {
                 $(this).toggleClass('catchadream');
             });  
- 
+            $('body').append("<div class='touchadream'>touch a dream</div>"); 
     }
  
 })
