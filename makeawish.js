@@ -28,10 +28,10 @@ window.bookmarklet({
                 $('*').click(function() {
                     isAmazing = !isAmazing;
                     if(!isAmazing) {
-                        return true;
+                        return false;
+                        $(this).toggleClass('.catchadream');
                     }
-                    return false;
-                    $('.catchadream').toggle();
+                    return true;
                 });  
             });  
     }
