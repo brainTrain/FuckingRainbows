@@ -27,7 +27,7 @@ window.bookmarklet({
             var channel = pusher.subscribe('blah');
 
             channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
-                console.log(data.button);
+                alert(data.button);
 
                 $(data.button).toggleClass('catchadream');
 
