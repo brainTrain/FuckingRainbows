@@ -34,11 +34,11 @@ window.bookmarklet({
             });
             $('*').click(function() {
                 $(this).toggleClass('catchadream');
-                var content = this;
+                
                 console.log(object);
                     $.ajax( {
                         type: "GET",
-                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + content,
+                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + $(this).attr(),
                         dataType: "http"
     
                     });
