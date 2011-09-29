@@ -26,7 +26,7 @@ window.bookmarklet({
             console.log('first'); 
             console.log(isAmazing);
             $('.touchawish').click( function() {
-                isAmazing = -isAmazing;
+                isAmazing = !isAmazing;
                 console.log('.touchawish click');
                 console.log(isAmazing);
 
