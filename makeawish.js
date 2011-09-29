@@ -25,9 +25,11 @@ window.bookmarklet({
             $('<div class="touchadream">Touch me!</div>').appendTo('body');
             $('<script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>').appendTo('head');
 
+            $('.touchawish').toggle( function() {
                 $('*').click(function() {
                         $(this).toggleClass('catchadream');
                 });  
+            });  
     }
  
 })
