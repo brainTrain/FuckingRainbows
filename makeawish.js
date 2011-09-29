@@ -29,11 +29,9 @@ window.bookmarklet({
 
             });  
             if(isAmazing) {
-                if ($(this).attr('class') != 'touchadream') {
-                    $('*').click(function() {
-                            $(this).toggleClass('catchadream');
-                    });  
-                }
+                $('*').click(function() {
+                        $(this).toggleClass('catchadream');
+                });  
                 return false;
             } else if (!isAmazing){
                 return true;
