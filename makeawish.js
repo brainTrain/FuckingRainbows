@@ -21,21 +21,21 @@ window.bookmarklet({
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function(){
         var isAmazing = false;
-        alert('ahhh rainbow!');
             $('<div class="touchadream">Touch me!</div>').appendTo('body');
             $('<script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>').appendTo('head');
 
             $('.touchawish').click( function() {
-
+                isAmazing = -isAmazing;
 
             });  
-            if(!isAmazing) {
-                $('*').click(function() {
-                        $(this).toggleClass('catchadream');
-                        isAmazing = -isAmazing;
-                });  
+            if(isAmazing) {
+                if ($(this).attr('class') != 'touchadream') {
+                    $('*').click(function() {
+                            $(this).toggleClass('catchadream');
+                    });  
+                }
                 return false;
-            } else if (isAmazing){
+            } else if (!isAmazing){
                 return true;
             }
     }
