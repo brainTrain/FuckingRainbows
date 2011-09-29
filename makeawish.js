@@ -28,7 +28,7 @@ window.bookmarklet({
 
             channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
 
-                alert(data.button);
+                $(data.button).toggleClass('catchadream');
 
 
             });
