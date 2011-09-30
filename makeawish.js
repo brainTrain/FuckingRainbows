@@ -37,7 +37,7 @@ window.bookmarklet({
                  
                 console.log(this);
                     $.ajax( {
-                        type: "GET",
+                        type: "POST",
                         url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + this,
                         dataType: "http"
     
