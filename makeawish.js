@@ -18,7 +18,6 @@ window.bookmarklet({
  
     css : ['http://braintrain.github.com/fuckingrainbows/rainbows.css'],
     js  : ['http://js.pusherapp.com/1.9/pusher.min.js'],
-    js  : ['http://braintrain.github.com/fuckingrainbows/soundmanager2-jsmin.js'],
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function(){
             $('<div class="touchadream">Touch me!</div>').appendTo('body');
