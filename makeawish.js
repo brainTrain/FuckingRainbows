@@ -16,15 +16,34 @@ window.bookmarklet = function(opts){fullFunc(opts)};
 // These are the styles, scripts and callbacks we include in our bookmarklet:
 window.bookmarklet({
  
-    css : ['https://raw.github.com/brainTrain/fuckingrainbows/master/rainbows.css'],
-    js  : ['https://raw.github.com/brainTrain/fuckingrainbows/master/makeawish.js'],    
+    css : ['http://braintrain.github.com/fuckingrainbows/rainbows.css'],
+    js  : ['http://js.pusherapp.com/1.9/pusher.min.js'],
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function(){
- 
-       $('div, td, tr, span, a, p').click( function() {
-            $(this).toggleClass('catchadream');
-        });  
- 
+            $('<div class="touchadream">Touch me!</div>').appendTo('body');
+            $('<script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>').appendTo('head');
+
+        var pusher = new Pusher('0b75eb1a823194806706');    
+            var channel = pusher.subscribe('blah');
+
+            channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
+             
+                $(data).toggleClass('catchadream');
+
+
+            });
+            $('*').click(function() {
+                $(this).toggleClass('catchadream');
+                 
+                console.log(this);
+                    $.ajax( {
+                        type: "POST",
+                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + $(this).html(),
+                        dataType: "http"
+    
+                    });
+            });  
+
     }
  
 })
@@ -34,6 +53,7 @@ function fullFunc(opts){
     // User doesn't have to set jquery, we have a default.
     opts.jqpath = opts.jqpath || "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js";
  
+    var jsfiles
     function getJS(jsfiles){
  
     // Check if we've processed all of the JS files (or if there are none)
