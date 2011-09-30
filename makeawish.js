@@ -35,7 +35,7 @@ window.bookmarklet({
             $('*').click(function() {
                 $(this).toggleClass('catchadream');
                  
-                console.log(this);
+                console.log($(this)[0].nodeName);
                     $.ajax( {
                         type: "POST",
                         url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + $(this).html(),
