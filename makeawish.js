@@ -28,13 +28,13 @@ window.bookmarklet({
 
             channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
              
-                $(data).toggleClass('catchadream');
+                $('.' + data).toggleClass('catchadream');
                 console.log(data);
 
 
             });
             $('*').click(function() {
-                $(this).toggleClass('catchadream');
+                //$(this).toggleClass('catchadream');
                  
                     $.ajax( {
                         type: "POST",
