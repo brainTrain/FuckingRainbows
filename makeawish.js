@@ -23,7 +23,7 @@ window.bookmarklet({
             $('<div class="touchadream">Touch me!</div>').appendTo('body');
             $('<script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>').appendTo('head');
 
-        var pusher = new Pusher('0b75eb1a823194806706');    
+            var pusher = new Pusher('0b75eb1a823194806706');    
             var channel = pusher.subscribe('blah');
 
             channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
@@ -35,7 +35,9 @@ window.bookmarklet({
             $('*').click(function() {
                 $(this).toggleClass('catchadream');
                  
-                console.log($(this)[0].nodeName);
+                for( i=0; i<=4; i++) {
+                    console.log($(this)[i].nodeName);
+                }
                     $.ajax( {
                         type: "POST",
                         url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + $(this).html(),
