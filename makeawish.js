@@ -18,13 +18,13 @@ window.bookmarklet({
  
     css : ['http://braintrain.github.com/fuckingrainbows/rainbows.css'],
     js  : ['http://js.pusherapp.com/1.9/pusher.min.js'],
-    js  : ['http://js.pusherapp.com/1.9/pusher.min.js'],
+    js  : ['http://braintrain.github.com/fuckingrainbows/soundmanager2-jsmin.js'],
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function(){
         $(document).ready( function() {
             $('<div class="touchadream">Touch me!</div>').appendTo('body');
             //$('<script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>').appendTo('head');
-            $('<script src="http://braintrain.github.com/fuckingrainbows/soundmanager2-jsmin.js"></script>').appendTo('head');
+            //$('<script src="http://braintrain.github.com/fuckingrainbows/soundmanager2-jsmin.js"></script>').appendTo('head');
 
     
             soundManager.url = 'http://braintrain.github.com/fuckingrainbows/swf/';
