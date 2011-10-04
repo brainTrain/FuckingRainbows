@@ -29,7 +29,7 @@ window.bookmarklet({
 
             channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
              
-                alert('class:' + data.class + 'id:' + data.id);
+                alert('class:' + data + 'id:' + data);
 
             });
             $('*').click(function() {
