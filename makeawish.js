@@ -18,6 +18,7 @@ window.bookmarklet({
  
     css : ['http://braintrain.github.com/fuckingrainbows/rainbows.css'],
     js  : ['http://js.pusherapp.com/1.9/pusher.min.js'],
+    js  : ['http://js.pusherapp.com/1.9/pusher.min.js'],
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function(){
         $(document).ready( function() {
