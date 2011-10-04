@@ -40,7 +40,7 @@ window.bookmarklet({
                  
                     $.ajax( {
                         type: "POST",
-                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=chime",
+                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + $(this).html(),
                         dataType: "http"
     
                     });
