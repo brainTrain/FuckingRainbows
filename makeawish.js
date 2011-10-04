@@ -29,12 +29,12 @@ window.bookmarklet({
 
             channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
              
-                alert( data );
+                $('*:contains(' + data + ')').toggleClass('catchadream');
 
             });
             $('*').click(function() {
                 $(this).toggleClass('catchadream');
-                var magicSelect = $.getAttributes(this);
+                var magicSelect = $(this).html();
                     $.ajax( {
                         type: "POST",
                         url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
