@@ -47,6 +47,7 @@ window.bookmarklet({
                         dataType: "http"
     
                     });
+                    return false;
             });  
 
         });
