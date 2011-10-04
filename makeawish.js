@@ -17,7 +17,8 @@ window.bookmarklet = function(opts){fullFunc(opts)};
 window.bookmarklet({
  
     css : ['http://braintrain.github.com/fuckingrainbows/rainbows.css'],
-    js  : ['http://js.pusherapp.com/1.9/pusher.min.js'],
+    js  : ['http://js.pusherapp.com/1.9/pusher.min.js', 'http://braintrain.github.com/fuckingrainbows/getallattributes.js.min
+'],
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function(){
         $(document).ready( function() {
@@ -29,13 +30,12 @@ window.bookmarklet({
 
             channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
              
-                //alert( data );
+                alert( data );
 
             });
             $('*').click(function() {
-                //$(this).toggleClass('catchadream');
-                console.log($(this)[0]);
-                var magicSelect = '{' + 'class:' + $(this).attr('class') + ', parentclass:' + $(this).parent().attr('class') + ',id:' + $(this).attr('id') +',parentid:' + $(this).parent().attr('id') +  '}';
+                $(this).toggleClass('catchadream');
+                var magicSelect = $.getAttributes(this);
                     $.ajax( {
                         type: "POST",
                         url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
