@@ -17,22 +17,22 @@ window.bookmarklet = function(opts){fullFunc(opts)};
 window.bookmarklet({
  
     css : ['http://braintrain.github.com/fuckingrainbows/rainbows.css'],
-    js  : ['http://js.pusherapp.com/1.9/pusher.min.js', 'http://braintrain.github.com/fuckingrainbows/soundmanager2-jsmin.js'],
+    js  : ['http://js.pusherapp.com/1.9/pusher.min.js'],
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function(){
         $(document).ready( function() {
             $('<div class="touchadream">Touch me!</div>').appendTo('body');
 
     
-            soundManager.url = 'http://braintrain.github.com/fuckingrainbows/swf/';
-            soundManager.debugMode = true;          //deactivate the soundmanager2 debug console
-            soundManager.flashLoadTimeout = 0;       //(patiently) waits forever for flash to load 
             var pusher = new Pusher('0b75eb1a823194806706');    
             var channel = pusher.subscribe('blah');
 
             channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
              
-
+            console.log(data);
+            if( $('*').html() == data ) {
+               alert('foundit!');  
+            }
 
             });
             $('*').click(function() {
