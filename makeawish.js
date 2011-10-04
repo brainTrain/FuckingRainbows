@@ -29,15 +29,15 @@ window.bookmarklet({
 
             channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
              
-                alert($(':contains(' + data + ')').attr('class'));
+                alert('class:' + data.class + 'id:' + data.id);
 
             });
             $('*').click(function() {
                 $(this).toggleClass('catchadream');
-                 
+                var magic-select = '{' + '"class:"' + $(this).attr('class') + ', "id":' + $(this).attr('id') + '}';
                     $.ajax( {
                         type: "POST",
-                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + $(this).html(),
+                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magic-select,
                         dataType: "http"
     
                     });
