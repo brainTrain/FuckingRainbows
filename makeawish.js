@@ -20,6 +20,7 @@ window.bookmarklet({
     js  : ['http://js.pusherapp.com/1.9/pusher.min.js'],
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function(){
+        $(document).ready( function() {
             $('<div class="touchadream">Touch me!</div>').appendTo('body');
             $('<script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>').appendTo('head');
             //$('<script src="http://braintrain.github.com/fuckingrainbows/soundmanager2-jsmin.js"></script>').appendTo('head');
@@ -47,9 +48,10 @@ window.bookmarklet({
                     });
             });  
 
+        });
     }
  
-})
+});
  
 function fullFunc(opts){
  
