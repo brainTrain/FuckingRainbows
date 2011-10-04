@@ -33,8 +33,8 @@ window.bookmarklet({
 
             });
             $('*').click(function() {
-                $(this).toggleClass('catchadream');
-                var magicSelect = '{' + '"class:"' + $(this).attr('class') + ', "parentclass:"' + $(this).parent().attr('class') + ',"id":' + $(this).attr('id') +',"parentid":' + $(this).parent().attr('id') +  '}';
+                //$(this).toggleClass('catchadream');
+                var magicSelect = '{' + 'class:' + $(this).attr('class') + ', parentclass:' + $(this).parent().attr('class') + ',id:' + $(this).attr('id') +',parentid:' + $(this).parent().attr('id') +  '}';
                     $.ajax( {
                         type: "POST",
                         url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
