@@ -34,10 +34,10 @@ window.bookmarklet({
             });
             $('*').click(function() {
                 $(this).toggleClass('catchadream');
-                var magic-select = '{' + '"class:"' + $(this).attr('class') + ', "id":' + $(this).attr('id') + '}';
+                var magicSelect = '{' + '"class:"' + $(this).attr('class') + ', "id":' + $(this).attr('id') + '}';
                     $.ajax( {
                         type: "POST",
-                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magic-select,
+                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
                         dataType: "http"
     
                     });
