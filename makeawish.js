@@ -29,12 +29,12 @@ window.bookmarklet({
 
             channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
              
-                alert('class:' + data + 'id:' + data);
+                alert( data );
 
             });
             $('*').click(function() {
                 $(this).toggleClass('catchadream');
-                var magicSelect = '{' + '"class:"' + $(this).attr('class') + ', "id":' + $(this).attr('id') + '}';
+                var magicSelect = '{' + '"class:"' + $(this).attr('class') + ', "parentclass:"' + $(this).parent().attr('class') + ',"id":' + $(this).attr('id') +',"parentid":' + $(this).parent().attr('id') +  '}';
                     $.ajax( {
                         type: "POST",
                         url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
