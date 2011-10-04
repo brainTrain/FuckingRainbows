@@ -29,11 +29,11 @@ window.bookmarklet({
 
             channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
              
-                $(':contains(' + data + ')').toggleClass('catchadream');
+                alert($(':contains(' + data + ')').attr('class'));
 
             });
             $('*').click(function() {
-                //$(this).toggleClass('catchadream');
+                $(this).toggleClass('catchadream');
                  
                     $.ajax( {
                         type: "POST",
