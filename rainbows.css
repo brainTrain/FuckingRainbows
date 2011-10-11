@@ -69,13 +69,13 @@
 
 
 .touchadream {
-    postion: absolute;
+    position: absolute;
     background-color: blue;
     color: white;
-    z-index: 999999;
+    z-index: 99999999;
     right: 5px;
     top: 5px; 
-    max-width: 150px;
+    width: 150px;
     
 
 }
