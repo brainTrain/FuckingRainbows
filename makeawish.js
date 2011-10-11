@@ -38,7 +38,7 @@ window.bookmarklet({
                         if( $(this).attr('class') != 'touchadream') {
                             $(this).toggleClass('catchadream');
                             
-                            if( $(this).attr('class') != 'partytehdreamz') {
+                            if( $(this).attr('class') == 'partytehdreamz') {
                                 return true;    
                             }
 
