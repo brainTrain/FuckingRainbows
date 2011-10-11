@@ -76,6 +76,16 @@
     right: 5px;
     top: 5px; 
     width: 150px;
+}
+
+.partytehdreamz {
+    position: absolute;
+    background-color: red;
+    color: white;
+    z-index: 99999999;
+    right: 5px;
+    top: 10px; 
+    width: 150px;
     
 
 }

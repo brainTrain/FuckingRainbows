@@ -22,26 +22,51 @@ window.bookmarklet({
     ready : function(){
         $(document).ready( function() {
             $('<div class="touchadream">Touch me!</div>').appendTo('body');
+            $('<div class="partytehdreamz">Activate Rainbow Party!!</div>').appendTo('body');
 
-    
-            var pusher = new Pusher('0b75eb1a823194806706');    
-            var channel = pusher.subscribe('blah');
+            var dreamMagic = false;
+            var partyMagic = false;
 
-            channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
-             
-                $(':contains(' + data + ')').toggleClass('catchadream');
+            $('.touchadream').live('click', function() {
+                dreamMagic = !dreamMagic;
+                console.trace(dreamMagic);
+                //for jon
+                $(this).toggleClass('no more rainbows please!!');
+                if(dreamMagic = true) {
+                    $('*').live('click', function() {
+                        if( $(this).attr('class') != 'touchadream') {
+                            $(this).toggleClass('catchadream');
+                            return false;
+                        }
+                    });  
+                }
+                return true;
+            });  
+            $('.partytehdreamz').click( function() {
+                partyMagic = !partyMagic;
+                $(this).toggleClass('leave the party... :(');
+                if(partyMagic = true) {
 
-            });
-            $('*').click(function() {
-                //$(this).toggleClass('catchadream');
-                var magicSelect = $(this).html();
-                    $.ajax( {
-                        type: "POST",
-                        url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
-                        dataType: "http"
-    
+                    var pusher = new Pusher('0b75eb1a823194806706');    
+                    var channel = pusher.subscribe('blah');
+
+                    channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
+                     
+                        $(':contains(' + data + ')').toggleClass('catchadream');
+
                     });
-                    return false;
+
+                    $('*').live('click', function() {
+                        var magicSelect = $(this).html();
+                            $.ajax( {
+                                type: "POST",
+                                url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
+                                dataType: "http"
+    
+                        return false;
+                    });  
+                }
+                return true;
             });  
 
         });
