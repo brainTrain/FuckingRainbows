@@ -72,7 +72,7 @@
     postion: absolute;
     background-color: blue;
     color: white;
-    z-index: 1999;
+    z-index: 999999;
     right: 5px;
     top: 5px; 
     max-width: 150px;
