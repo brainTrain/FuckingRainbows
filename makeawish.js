@@ -19,15 +19,16 @@ window.bookmarklet({
     css : ['http://braintrain.github.com/fuckingrainbows/rainbows.css'],
     js  : ['http://js.pusherapp.com/1.9/pusher.min.js'],
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
-    ready : function(){
+    ready : function() {
         $(document).ready( function() {
             $('<div class="touchadream">Touch me!</div>').appendTo('body');
-            $('<div class="partytehdreamz">Activate Rainbow Party!!</div>').appendTo('body');
+
 
             var dreamMagic = false;
             var partyMagic = false;
 
             $('.touchadream').live('click', function() {
+                $('<div class="partytehdreamz">Activate Rainbow Party!!</div>').appendTo('body');
                 dreamMagic = !dreamMagic;
                 console.trace(dreamMagic);
                 //for jon
@@ -63,6 +64,7 @@ window.bookmarklet({
                                 url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
                                 dataType: "http"
     
+                            });
                         return false;
                     });  
                 }
