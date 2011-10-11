@@ -30,7 +30,6 @@ window.bookmarklet({
             $('.touchadream').live('click', function() {
                 $('<div class="partytehdreamz">Activate Rainbow Party!!</div>').appendTo('body');
                 dreamMagic = !dreamMagic;
-                console.trace(dreamMagic);
                 //for jon
                 $(this).toggleClass('no more rainbows please!!');
                 if(dreamMagic = true) {
