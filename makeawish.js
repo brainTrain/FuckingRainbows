@@ -37,35 +37,10 @@ window.bookmarklet({
                     $('*').live('click', function() {
                         if( $(this).attr('class') != 'touchadream') {
                             $(this).toggleClass('catchadream');
-
-                            $('.partytehdreamz').click( function() {
-                                partyMagic = !partyMagic;
-                                $(this).toggleClass('leave the party... :(');
-                                if(partyMagic = true) {
-
-                                    var pusher = new Pusher('0b75eb1a823194806706');    
-                                    var channel = pusher.subscribe('blah');
-
-                                    channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
-                                     
-                                        $(':contains(' + data + ')').toggleClass('catchadream');
-
-                                    });
-
-                                    $('*').live('click', function() {
-                                        var magicSelect = $(this).html();
-                                            $.ajax( {
-                                                type: "POST",
-                                                url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
-                                                dataType: "http"
-                    
-                                            });
-                                        return false;
-                                    });  
-                                }
-                                return true;
-                            });  
-
+                            
+                            if( $(this).attr('class') != 'partytehdreamz') {
+                                return true;    
+                            }
 
                             return false;
                         }
@@ -74,6 +49,33 @@ window.bookmarklet({
                 return true;
             });  
 
+            $('.partytehdreamz').click( function() {
+                partyMagic = !partyMagic;
+                $(this).toggleClass('leave the party... :(');
+                if(partyMagic = true) {
+
+                    var pusher = new Pusher('0b75eb1a823194806706');    
+                    var channel = pusher.subscribe('blah');
+
+                    channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
+                     
+                        $(':contains(' + data + ')').toggleClass('catchadream');
+
+                    });
+
+                    $('*').live('click', function() {
+                        var magicSelect = $(this).html();
+                            $.ajax( {
+                                type: "POST",
+                                url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
+                                dataType: "http"
+    
+                            });
+                        return false;
+                    });  
+                }
+                return true;
+            });  
 
         });
     }
