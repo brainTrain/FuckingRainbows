@@ -49,7 +49,7 @@ window.bookmarklet({
                 return true;
             });  
 
-            $('.partytehdreamz').click( function() {
+            $('.partytehdreamz').live('click', function() {
                 partyMagic = !partyMagic;
                 $(this).toggleClass('leave the party... :(');
                 if(partyMagic = true) {
