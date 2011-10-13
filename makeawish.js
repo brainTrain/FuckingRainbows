@@ -21,18 +21,23 @@ window.bookmarklet({
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function() {
         $(document).ready( function() {
+            $('<div class="partytehdreamz">Activate Rainbow Party!!</div>').appendTo('body');
             $('<div class="touchadream">Touch me!</div>').appendTo('body');
 
 
             var dreamMagic = false;
             var partyMagic = false;
 
-            $('.touchadream').live('click', function() {
-                $('<div class="partytehdreamz">Activate Rainbow Party!!</div>').appendTo('body');
-                dreamMagic = !dreamMagic;
-                //for jon
-                $(this).toggleClass('no more rainbows please!!');
-                if(dreamMagic = true) {
+                $('.touchadream').live('click', function() {
+                    dreamMagic = !dreamMagic;
+                    if(partyMagic == true) {
+                        partyMagic = !partyMagic;
+                        $('.partytehdreamz').html('Activate Rainbow Party!!');
+                    }
+                });  
+                if( dreamMagic == true && partyMagic == false ) {
+                    //for jon
+                    $('.touchadream').html('no more rainbows please!!');
                     $('*').live('click', function() {
                         if( $(this).attr('class') != 'touchadream') {
                             $(this).toggleClass('catchadream');
@@ -44,38 +49,40 @@ window.bookmarklet({
                             return false;
                         }
                     });  
+                 }
+                $('.partytehdreamz').live('click', function() {
+                    partyMagic = !partyMagic;
+                    if(dreamMagic == true) {
+                        dreamMagic = !dreamMagic;
+                        $('.touchadream').html('Touch me!');
+                    }
+                });  
+                if( dreamMagic == false && partyMagic == true ) {
+                    $('.partytehdreamz').html('leave the party... :(');
+
+                        var pusher = new Pusher('0b75eb1a823194806706');    
+                        var channel = pusher.subscribe('blah');
+
+                        channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
+                         
+                            $(':contains(' + data + ')').toggleClass('catchadream');
+
+                        });
+
+                        $('*').live('click', function() {
+                            if( $(this).attr('class') != 'partytehdreamz') {
+                                var magicSelect = $(this).html();
+                                $.ajax( {
+                                    type: "POST",
+                                    url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
+                                    dataType: "http"
+        
+                                });
+                            return false;
+                            }
+                            return true; 
+                        });  
                 }
-                return true;
-            });  
-
-            $('.partytehdreamz').live('click', function() {
-                partyMagic = !partyMagic;
-                $(this).toggleClass('leave the party... :(');
-                if(partyMagic = true) {
-
-                    var pusher = new Pusher('0b75eb1a823194806706');    
-                    var channel = pusher.subscribe('blah');
-
-                    channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
-                     
-                        $(':contains(' + data + ')').toggleClass('catchadream');
-
-                    });
-
-                    $('*').live('click', function() {
-                        var magicSelect = $(this).html();
-                            $.ajax( {
-                                type: "POST",
-                                url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
-                                dataType: "http"
-    
-                            });
-                        return false;
-                    });  
-                }
-                return true;
-            });  
-
         });
     }
  
