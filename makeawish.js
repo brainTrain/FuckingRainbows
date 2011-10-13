@@ -60,9 +60,7 @@ window.bookmarklet({
                             $(':contains(' + data + ')').toggleClass('catchadream');
 
                         });
-                    } else if (!partyMagic) {
-                        pusher.disconnect();
-                    }              
+                    }     
                 });  
                 $('*').live('click', function() {
                     if( dreamMagic && !partyMagic ) {
