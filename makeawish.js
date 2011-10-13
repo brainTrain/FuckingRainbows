@@ -30,7 +30,7 @@ window.bookmarklet({
 
                 $('.touchadream').live('click', function() {
                     dreamMagic = !dreamMagic;
-                    if(!dreamMagic) {
+                    if(dreamMagic) {
                         $('.touchadream').html('no more rainbows please!!');
                     } else {
                         $('.touchadream').html('Touch me!');
@@ -39,9 +39,18 @@ window.bookmarklet({
                 $('.partytehdreamz').live('click', function() {
                     partyMagic = !partyMagic;
                     if(dreamMagic) {
-                        alert('blahaaa!!');
                         dreamMagic = !dreamMagic;
                         $('.touchadream').html('Touch me!');
+                    }
+                    if( !dreamMagic && partyMagic ) {
+                        var pusher = new Pusher('0b75eb1a823194806706');    
+                        var channel = pusher.subscribe('blah');
+
+                        channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
+                         
+                            $(':contains(' + data + ')').toggleClass('catchadream');
+
+                            });
                     }
                 });  
                 $('*').live('click', function() {
@@ -72,16 +81,7 @@ window.bookmarklet({
                         return true; 
                     }
                 });  
-                if( !dreamMagic && partyMagic ) {
-                    var pusher = new Pusher('0b75eb1a823194806706');    
-                    var channel = pusher.subscribe('blah');
 
-                    channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
-                     
-                        $(':contains(' + data + ')').toggleClass('catchadream');
-
-                        });
-                }
 
 
         });
