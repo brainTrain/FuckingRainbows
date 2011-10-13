@@ -49,7 +49,6 @@ window.bookmarklet({
                     if(partyMagic) {
                         $('.partytehdreamz').html('leave the party... :(');
                     } else {
-                        pusher.disconnect();
                         $('.partytehdreamz').html('Activate Rainbow Party!!');
                     }
                     if( !dreamMagic && partyMagic ) {
@@ -61,7 +60,9 @@ window.bookmarklet({
                             $(':contains(' + data + ')').toggleClass('catchadream');
 
                         });
-                    }                
+                    } else if (!partyMagic) {
+                        pusher.disconnect();
+                    }              
                 });  
                 $('*').live('click', function() {
                     if( dreamMagic && !partyMagic ) {
