@@ -69,7 +69,7 @@
 
 
 .touchadream {
-    position: absolute;
+    position: fixed;
     background-color: blue;
     color: white;
     z-index: 99999999;
@@ -80,7 +80,7 @@
 }
 
 .partytehdreamz {
-    position: absolute;
+    position: fixed;
     background-color: red;
     color: white;
     z-index: 99999999;
