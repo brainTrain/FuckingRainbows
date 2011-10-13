@@ -36,20 +36,6 @@ window.bookmarklet({
                         $('.touchadream').html('Touch me!');
                     }
                 });  
-                    $('*').live('click', function() {
-                        if( dreamMagic && !partyMagic ) {
-                            //for jon
-                            if( $(this).attr('class') != 'touchadream') {
-                                $(this).toggleClass('catchadream');
-                                
-                                if( $(this).attr('class') == 'partytehdreamz') {
-                                    return true;    
-                                }
-
-                                return false;
-                            }
-                        }
-                    });  
                 $('.partytehdreamz').live('click', function() {
                     partyMagic = !partyMagic;
                     if(dreamMagic) {
@@ -58,8 +44,20 @@ window.bookmarklet({
                         $('.touchadream').html('Touch me!');
                     }
                 });  
-                if( !dreamMagic && partyMagic ) {
-                    $('.partytehdreamz').html('leave the party... :(');
+                $('*').live('click', function() {
+                    if( dreamMagic && !partyMagic ) {
+                        //for jon
+                        if( $(this).attr('class') != 'touchadream') {
+                            $(this).toggleClass('catchadream');
+                            
+                            if( $(this).attr('class') == 'partytehdreamz') {
+                                return true;    
+                            }
+
+                            return false;
+                        }
+                    }
+                    if( !dreamMagic && partyMagic ) {
 
                         var pusher = new Pusher('0b75eb1a823194806706');    
                         var channel = pusher.subscribe('blah');
@@ -70,20 +68,21 @@ window.bookmarklet({
 
                         });
 
-                        $('*').live('click', function() {
-                            if( $(this).attr('class') != 'partytehdreamz') {
-                                var magicSelect = $(this).html();
-                                $.ajax( {
-                                    type: "POST",
-                                    url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
-                                    dataType: "http"
-        
-                                });
-                            return false;
-                            }
-                            return true; 
-                        });  
-                }
+                        if( $(this).attr('class') != 'partytehdreamz') {
+                            var magicSelect = $(this).html();
+                            $.ajax( {
+                                type: "POST",
+                                url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
+                                dataType: "http"
+
+                            });
+                        return false;
+                        }
+                        return true; 
+                    }
+                });  
+
+
         });
     }
  
