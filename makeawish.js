@@ -36,7 +36,7 @@ window.bookmarklet({
                         $('.partytehdreamz').html('Activate Rainbow Party!!');
                     }
                 });  
-                if( dreamMagic == true && partyMagic == false ) {
+                if( dreamMagic && !partyMagic ) {
                     //for jon
                     $('.touchadream').html('no more rainbows please!!');
                     $('*').live('click', function() {
@@ -59,7 +59,7 @@ window.bookmarklet({
                         $('.touchadream').html('Touch me!');
                     }
                 });  
-                if( dreamMagic == false && partyMagic == true ) {
+                if( !dreamMagic && partyMagic ) {
                     $('.partytehdreamz').html('leave the party... :(');
 
                         var pusher = new Pusher('0b75eb1a823194806706');    
