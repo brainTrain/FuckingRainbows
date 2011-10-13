@@ -30,6 +30,7 @@ window.bookmarklet({
 
                 $('.touchadream').live('click', function() {
                     dreamMagic = !dreamMagic;
+                    alert(dreamMagic);
                     if(partyMagic == true) {
                         partyMagic = !partyMagic;
                         $('.partytehdreamz').html('Activate Rainbow Party!!');
@@ -52,6 +53,7 @@ window.bookmarklet({
                  }
                 $('.partytehdreamz').live('click', function() {
                     partyMagic = !partyMagic;
+                    alert(partyMagic);
                     if(dreamMagic == true) {
                         dreamMagic = !dreamMagic;
                         $('.touchadream').html('Touch me!');
