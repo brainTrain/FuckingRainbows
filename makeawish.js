@@ -79,12 +79,14 @@ window.bookmarklet({
 
                         if( $(this).attr('class') != 'partytehdreamz') {
                             var magicSelect = $(this).html();
-                            $.ajax( {
-                                type: "POST",
-                                url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
-                                dataType: "http"
+                            if( magicSelect != '' ) {
+                                $.ajax( {
+                                    type: "POST",
+                                    url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
+                                    dataType: "http"
 
-                            });
+                                });
+                            }
                         return false;
                         }
                         return true; 
