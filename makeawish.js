@@ -30,6 +30,10 @@ window.bookmarklet({
 
                 $('.touchadream').live('click', function() {
                     dreamMagic = !dreamMagic;
+                    if(partyMagic) {
+                        partyMagic = !partyMagic;
+                        $('.partytehdreamz').html('leave the party... :(');
+                    }
                     if(dreamMagic) {
                         $('.touchadream').html('no more rainbows please!!');
                     } else {
@@ -41,6 +45,11 @@ window.bookmarklet({
                     if(dreamMagic) {
                         dreamMagic = !dreamMagic;
                         $('.touchadream').html('Touch me!');
+                    }
+                    if(partyMagic) {
+                        $('.partytehdreamz').html('leave the party... :(');
+                    } else {
+                        $('.partytehdreamz').html('Activate Rainbow Party!!');
                     }
                     if( !dreamMagic && partyMagic ) {
                         var pusher = new Pusher('0b75eb1a823194806706');    
