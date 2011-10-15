@@ -261,6 +261,8 @@
     position: fixed;
     color: white;
     top: 260px;
+    z-index: 99999999;
+    right: 5px;
     display: none;
     padding: 10px  20px;
     font-family: "cooper-black-std-1", "cooper-black-std-2", Helvetica, Arial, sans-serif;
