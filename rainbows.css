@@ -70,13 +70,10 @@
 
 .touchadream {
     position: fixed;
-    background-color: blue;
     color: white;
     z-index: 99999999;
     right: 5px;
     top: 5px; 
-    width: 150px;
-    height: 40px;
 
     display: inline-block;
     -webkit-border-radius: 8px;
@@ -136,13 +133,10 @@
 
 .partytehdreamz {
     position: fixed;
-    background-color: red;
     color: white;
     z-index: 99999999;
     right: 5px;
     top: 55px; 
-    width: 150px;
-    height: 40px;
     
     display: inline-block;
     -webkit-border-radius: 8px;
@@ -202,12 +196,10 @@
 
 .karmaadream {
     position: fixed;
-    background-color: red;
     color: white;
     z-index: 99999999;
     right: 5px;
     top: 110px; 
-    width: 150px;
     height: 80px;
     
     display: inline-block;
@@ -268,7 +260,7 @@
 
 .karmagoodz {
     position: fixed;
-    top: 160px;
+    top: 260px;
     height: 100px;
     width: 100px;
     display: none;
