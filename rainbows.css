@@ -261,8 +261,6 @@
 .karmagoodz {
     position: fixed;
     top: 260px;
-    height: 100px;
-    width: 100px;
     display: none;
     padding: 10px  20px;
     font-family: "cooper-black-std-1", "cooper-black-std-2", Helvetica, Arial, sans-serif;
