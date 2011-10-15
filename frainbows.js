@@ -1,6 +1,11 @@
 $(document).ready( function() {
-   $('div, td, tr, span, a, p').click( function() {
-        $(this).toggleClass('catchadream');
+    $('*').click( function() {
+        if($(this).hasClass('.title')) {     
+            return true;
+        } else {
+            $(this).toggleClass('catchadream');
+            return false;
+        }
     });  
 
 });

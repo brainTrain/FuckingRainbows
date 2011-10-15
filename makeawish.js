@@ -21,8 +21,10 @@ window.bookmarklet({
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function() {
         $(document).ready( function() {
-            $('<div class="partytehdreamz">Activate Rainbow Party!!</div>').appendTo('body');
-            $('<div class="touchadream">Touch me!</div>').appendTo('body');
+            $('<div class="partytehdreamz catchadream"><span>Activate Rainbow Party!!</span></div>').appendTo('body');
+            $('<div class="touchadream catchadream"><span>Touch me!</span></div>').appendTo('body');
+            $('<div class="karmaadream catchadream"><span>Good karma me!</span></div>').appendTo('body');
+            $('<div class="karmagoodz"><p>Donate to here! Or send this to here!</p></div>').appendTo('body');
 
 
             var dreamMagic = false;
@@ -62,6 +64,10 @@ window.bookmarklet({
                         });
                     }     
                 });  
+                $('.karmaadream').live('click', function() {
+                    $('.karmagoodz').toggle();
+                    
+                });
                 $('*').live('click', function() {
                     if( dreamMagic && !partyMagic ) {
                         //for jon
