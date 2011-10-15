@@ -259,6 +259,7 @@
 
 .karmagoodz {
     position: fixed;
+    color: white;
     top: 260px;
     display: none;
     padding: 10px  20px;
