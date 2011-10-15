@@ -31,9 +31,8 @@ window.bookmarklet({
                 $('.touchadream').live('click', function() {
                     dreamMagic = !dreamMagic;
                     if(partyMagic) {
-                        alert(partyMagic);
                         partyMagic = !partyMagic;
-                        $('.partytehdreamz').html('leave the party... :(');
+                        $('.partytehdreamz').html('Activate Rainbow Party!!');
                     }
                     if(dreamMagic) {
                         $('.touchadream').html('no more rainbows please!!');
