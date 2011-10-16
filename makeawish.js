@@ -71,7 +71,7 @@ window.bookmarklet({
                 $('*').live('click', function() {
                     if( dreamMagic && !partyMagic ) {
                         //for jon
-                        if( !$(this).parent().hasClass('blue_button') || !$(this).hasClass('blue_button') || !$(this).parent().hasClass('white_button') || !$(this).hasClass('white_button')) {
+                        if( !$(this).parent().hasClass('blue_rb_button') || !$(this).hasClass('blue_rb_button') || !$(this).parent().hasClass('white_rb_button') || !$(this).hasClass('white_rb_button')) {
                             $(this).toggleClass('catchadream');
                             return false;
                         }
@@ -79,7 +79,7 @@ window.bookmarklet({
                     }
                     if( !dreamMagic && partyMagic ) {
 
-                        if( !$(this).parent().hasClass('blue_button') || !$(this).hasClass('blue_button') || !$(this).parent().hasClass('white_button') || !$(this).hasClass('white_button')) {
+                        if( !$(this).parent().hasClass('blue_rb_button') || !$(this).hasClass('blue_rb_button') || !$(this).parent().hasClass('white_rb_button') || !$(this).hasClass('white_rb_button')) {
                             var magicSelect = $(this).html();
                             if( magicSelect != '' ) {
                                 $.ajax( {
