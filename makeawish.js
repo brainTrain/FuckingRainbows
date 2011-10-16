@@ -60,6 +60,7 @@ window.bookmarklet({
                         channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
                          
                             $(':contains(' + data + ')').toggleClass('catchadream');
+                            alert(data);
 
                         });
                     }     
@@ -80,9 +81,9 @@ window.bookmarklet({
                     if( !dreamMagic && partyMagic ) {
 
                         if( !$(this).parent().hasClass('blue_rb_button') || !$(this).hasClass('blue_rb_button') || !$(this).parent().hasClass('white_rb_button') || !$(this).hasClass('white_rb_button')) {
+
                             var magicSelect = $(this).html();
                             if( magicSelect != '' ) {
-                                alert(magicSelect);
                                 $.ajax( {
                                     type: "POST",
                                     url: "http://www.bossemails.com/pushersound/com.php?channel=" + rainbowChannel + "&button=" + magicSelect,
