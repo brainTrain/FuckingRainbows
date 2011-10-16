@@ -72,19 +72,15 @@ window.bookmarklet({
                 $('*').live('click', function() {
                     if( dreamMagic && !partyMagic ) {
                         //for jon
-                        if( $(this).attr('class') != 'touchadream' || $(this).attr('class') != 'partytehdreamz' || $(this).attr('class') != 'karmaadream') {
+                        if( !$(this).hasClass('touchadream') || !$(this).hasClass('partytehdreamz') || !$(this).hasClass('karmaadream')) {
                             $(this).toggleClass('catchadream');
-                            
-                            if( $(this).attr('class') == 'partytehdreamz') {
-                                return true;    
-                            }
-
                             return false;
                         }
+                        return true;    
                     }
                     if( !dreamMagic && partyMagic ) {
 
-                        if( $(this).attr('class') != 'touchadream' || $(this).attr('class') != 'partytehdreamz' || $(this).attr('class') != 'karmaadream') {
+                        if( !$(this).hasClass('touchadream') || !$(this).hasClass('partytehdreamz') || !$(this).hasClass('karmaadream')) {
                             var magicSelect = $(this).html();
                             if( magicSelect != '' ) {
                                 $.ajax( {
