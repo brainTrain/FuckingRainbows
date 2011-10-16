@@ -24,7 +24,7 @@ window.bookmarklet({
             $('<div class="partytehdreamz"><span>Activate Rainbow Party!!</span></div>').appendTo('body');
             $('<div class="touchadream"><span>Touch me!</span></div>').appendTo('body');
             $('<div class="karmaadream"><span>Good karma me!</span></div>').appendTo('body');
-            $('<div class="karmagoodz"><p>I know these rainbows are fun, but if you want some real life awesome, donate to the Human Rights Campaign to help them fight for gay marriage!</p><p><a class="hrc_donate" href="http://shop.hrc.org/donate/hrc-donation-starting-at-5.html" target="blank"><span>Click here to donate!</span></a></p></div>').appendTo('body');
+            $('<div class="karmagoodz"><p>I know these rainbows are fun, but if you want some real life awesome, donate to the Human Rights Campaign to help them fight for gay marriage!</p><p><div class="hrc_donate" href="http://shop.hrc.org/donate/hrc-donation-starting-at-5.html" target="blank"><span>Click here to donate!</span></div></p></div>').appendTo('body');
 
 
             var dreamMagic = false;
