@@ -121,6 +121,7 @@
 }
 
 .blue_rb_button {
+    cursor: pointer;
     color: white;
     display: inline-block;
     -webkit-border-radius: 8px;
@@ -178,6 +179,7 @@
 }
 
 .white_rb_button {
+    cursor: pointer;
     color: #494A4A;
     display: inline-block;
     -webkit-border-radius: 8px;
