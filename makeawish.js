@@ -71,7 +71,7 @@ window.bookmarklet({
                 $('*').live('click', function() {
                     if( dreamMagic && !partyMagic ) {
                         //for jon
-                        if( !$(this).parent().hasClass('touchadream') || !$(this).hasClass('touchadream') || !$(this).parent().hasClass('partytehdreamz') || !$(this).hasClass('partytehdreamz') || !$(this).parent().hasClass('karmaadream')) || !$(this).hasClass('karmaadream') {
+                        if( !$(this).parent().hasClass('touchadream') || !$(this).hasClass('touchadream') || !$(this).parent().hasClass('partytehdreamz') || !$(this).hasClass('partytehdreamz') || !$(this).parent().hasClass('karmaadream') || !$(this).hasClass('karmaadream')) {
                             $(this).toggleClass('catchadream');
                             return false;
                         }
