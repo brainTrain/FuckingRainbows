@@ -29,6 +29,57 @@
     margin-left: 25%;
     color: white;
 }
+.instructions {
+    position: relative;
+    z-index: 4;
+    top: -400px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+    width: 76%;
+}
+.instructions p {
+    margin-top: 33px;
+
+}
+.suggest {
+    position: relative;
+    width: 76%;
+    z-index: 4;
+    top: -385px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+}
+.suggest p {
+    margin-top: 27px;
+
+}
+.float_left {
+    float: left;
+}
+.clear {
+    clear: both;
+}
+.info {
+    display: inline-block;
+    padding: 10px  20px;
+    font-family: "cooper-black-std-1", "cooper-black-std-2", Helvetica, Arial, sans-serif;
+    line-height: 1;
+    text-shadow: 0 -1px 1px rgba(19,65,88,.8);
+    background: #3194c6;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3194c6), to(#5bacd6));
+    background: -moz-linear-gradient(#3194c6, #5bacd6);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,.15);
+    -moz-box-shadow: inset 0 -1px 1px rgba(255,255,255,.15);
+    box-shadow: inset 0 -1px 1px rgba(255,255,255,.15);
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    -moz-transition: -moz-transform .2s ease-in-out;
+    -o-transition: -o-transform .2s ease-in-out;
+}
 
 .blue_button {
     color: white;
@@ -87,44 +138,6 @@
     transform: translate(0, 4px);
 }
 
-
-
-.instructions {
-    position: relative;
-    z-index: 4;
-    top: -400px;
-    margin-left: 15%;
-    margin-right: 15%;
-    color: white;
-}
-.suggest {
-    position: relative;
-    z-index: 4;
-    top: -385px;
-    margin-left: 15%;
-    margin-right: 15%;
-    color: white;
-}
-
-.info {
-    display: inline-block;
-    padding: 10px  20px;
-    font-family: "cooper-black-std-1", "cooper-black-std-2", Helvetica, Arial, sans-serif;
-    line-height: 1;
-    text-shadow: 0 -1px 1px rgba(19,65,88,.8);
-    background: #3194c6;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3194c6), to(#5bacd6));
-    background: -moz-linear-gradient(#3194c6, #5bacd6);
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,.15);
-    -moz-box-shadow: inset 0 -1px 1px rgba(255,255,255,.15);
-    box-shadow: inset 0 -1px 1px rgba(255,255,255,.15);
-    -webkit-transition: -webkit-transform .2s ease-in-out;
-    -moz-transition: -moz-transform .2s ease-in-out;
-    -o-transition: -o-transform .2s ease-in-out;
-}
 .white_button {
     color: #494A4A;
     display: inline-block;
@@ -180,4 +193,66 @@
     -moz-transform: translate(0, 4px);
     -o-transform: translate(0, 4px);
     transform: translate(0, 4px);
+}
+
+.cloud {
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+}
+.cloud_cluster {
+    position: relative;
+    width: 54px;
+    height: 37px;
+    z-index: 6;
+}
+#c0 {
+    position: absolute;
+    top: 26%;
+    left: 7%;
+
+}
+#c1 {
+    position: absolute;
+    top: 18%;
+    left: 22%;
+
+}
+#c2 {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+
+}
+#c3 {
+    position: absolute;
+    top: 26%;
+    left: 51%;
+}
+#c4 {
+    position: absolute;
+    top: 38%;
+    left: 58%;
+
+}
+#c5 {
+    position: absolute;
+    top: 52%;
+    left: 43%;
+
+}
+#c6 {
+    position: absolute;
+    top: 43%;
+    left: 30%;
+
+}
+#c7 {
+    position: absolute;
+    top: 48%;
+    left: 21%;
+
 }
