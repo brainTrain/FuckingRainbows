@@ -32,7 +32,6 @@ window.bookmarklet({
 
                 $('.touchadream').click( function() {
                     dreamMagic = !dreamMagic;
-                    alert(!$(this).hasClass('touchadream'));
                     if(partyMagic) {
                         partyMagic = !partyMagic;
                         $('.partytehdreamz span').html('Activate Rainbow Party!!');
