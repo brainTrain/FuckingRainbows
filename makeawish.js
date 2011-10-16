@@ -23,7 +23,7 @@ window.bookmarklet({
         $(document).ready( function() {
             $('<div class="partytehdreamz blue_button"><span>Activate Rainbow Party!!</span></div>').appendTo('body');
             $('<div class="touchadream blue_button"><span>Touch me!</span></div>').appendTo('body');
-            $('<div class="karmaadrea blue_button"><span>Good karma me!</span></div>').appendTo('body');
+            $('<div class="karmaadream blue_button"><span>Good karma me!</span></div>').appendTo('body');
             $('<div class="karmagoodz"><h2>Fucking fight for Human Rights!<h2><p>I know these rainbows are fun, but if you want some real life awesome, donate to the Human Rights Campaign to help them fight for gay marriage!</p><p><a class="hrc_donate blue_button" href="http://shop.hrc.org/donate/hrc-donation-starting-at-5.html" target="blank"><span>Click here to donate!</span></a></p></div>').appendTo('body');
 
 
