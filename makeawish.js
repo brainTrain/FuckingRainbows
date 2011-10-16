@@ -71,7 +71,7 @@ window.bookmarklet({
                 $('*').live('click', function() {
                     if( dreamMagic && !partyMagic ) {
                         //for jon
-                        if( !$(this).parent().hasClass('touchadream') || !$(this).hasClass('touchadream') || !$(this).parent().hasClass('partytehdreamz') || !$(this).hasClass('partytehdreamz') || !$(this).parent().hasClass('karmaadream') || !$(this).hasClass('karmaadream')) {
+                        if( !$(this).parent().hasClass('blue_button') || !$(this).hasClass('blue_button') || !$(this).parent().hasClass('white_button') || !$(this).hasClass('white_button')) {
                             $(this).toggleClass('catchadream');
                             return false;
                         }
@@ -79,7 +79,7 @@ window.bookmarklet({
                     }
                     if( !dreamMagic && partyMagic ) {
 
-                        if( !$(this).parent().hasClass('touchadream') || !$(this).hasClass('touchadream') || !$(this).parent().hasClass('partytehdreamz') || !$(this).hasClass('partytehdreamz') || !$(this).parent().hasClass('karmaadream') || !$(this).hasClass('karmaadream')) {
+                        if( !$(this).parent().hasClass('blue_button') || !$(this).hasClass('blue_button') || !$(this).parent().hasClass('white_button') || !$(this).hasClass('white_button')) {
                             var magicSelect = $(this).html();
                             if( magicSelect != '' ) {
                                 $.ajax( {
