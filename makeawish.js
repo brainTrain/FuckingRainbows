@@ -79,7 +79,7 @@ window.bookmarklet({
                     }
                     if( !dreamMagic && partyMagic ) {
 
-                        if( !$(this).parent().hasClass('touchadream') || !$(this).hasClass('touchadream') || !$(this).parent().hasClass('partytehdreamz') || !$(this).hasClass('partytehdreamz') || !$(this).parent().hasClass('karmaadream')) || !$(this).hasClass('karmaadream') {
+                        if( !$(this).parent().hasClass('touchadream') || !$(this).hasClass('touchadream') || !$(this).parent().hasClass('partytehdreamz') || !$(this).hasClass('partytehdreamz') || !$(this).parent().hasClass('karmaadream') || !$(this).hasClass('karmaadream')) {
                             var magicSelect = $(this).html();
                             if( magicSelect != '' ) {
                                 $.ajax( {
