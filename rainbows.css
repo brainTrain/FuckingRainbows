@@ -121,6 +121,7 @@
 }
 
 .blue_rb_button {
+    color: white;
     display: inline-block;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -177,6 +178,7 @@
 }
 
 .white_rb_button {
+    color: #494A4A;
     display: inline-block;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;

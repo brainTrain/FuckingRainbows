@@ -29,11 +29,9 @@
     margin-left: 25%;
     color: white;
 }
-.suggest_link {
-    color: #494A4A;
-}
 
 .blue_button {
+    color: white;
     display: inline-block;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -128,6 +126,7 @@
     -o-transition: -o-transform .2s ease-in-out;
 }
 .white_button {
+    color: #494A4A;
     display: inline-block;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
