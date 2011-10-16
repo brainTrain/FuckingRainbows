@@ -30,7 +30,7 @@ window.bookmarklet({
             var dreamMagic = false;
             var partyMagic = false;
 
-                $('.touchadream').live('click', function() {
+                $('.touchadream').click( function() {
                     dreamMagic = !dreamMagic;
                     alert(!$(this).hasClass('touchadream'));
                     if(partyMagic) {
@@ -43,7 +43,7 @@ window.bookmarklet({
                         $('.touchadream span').html('Touch me!');
                     }
                 });  
-                $('.partytehdreamz').live('click', function() {
+                $('.partytehdreamz').click( function() {
                     partyMagic = !partyMagic;
                     if(dreamMagic) {
                         dreamMagic = !dreamMagic;
@@ -65,7 +65,7 @@ window.bookmarklet({
                         });
                     }     
                 });  
-                $('.karmaadream span').live('click', function() {
+                $('.karmaadream span').click( function() {
                     $('.karmagoodz').toggle();
                     
                 });
