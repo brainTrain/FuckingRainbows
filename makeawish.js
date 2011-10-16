@@ -17,7 +17,7 @@ window.bookmarklet = function(opts){fullFunc(opts)};
 window.bookmarklet({
  
     css : ['http://braintrain.github.com/fuckingrainbows/rainbows.css'],
-    js  : ['http://js.pusherapp.com/1.9/pusher.min.js'],
+    js  : ['http://js.pusherapp.com/1.9/pusher.min.js', 'http://braintrain.github.com/fuckingrainbows/md5-min.js'],
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function() {
         $(document).ready( function() {
@@ -26,9 +26,11 @@ window.bookmarklet({
             $('<div class="karmaadream blue_rb_button"><span>Good karma me!</span></div>').appendTo('body');
             $('<div class="karmagoodz"><h2>Fucking fight for Human Rights!<h2><p>I know these rainbows are fun, but if you want some real life awesome, donate to the Human Rights Campaign to help them fight for gay marriage!</p><p><a class="hrc_donate white_rb_button" href="http://shop.hrc.org/donate/hrc-donation-starting-at-5.html" target="blank"><span>Click here to donate!</span></a></p></div>').appendTo('body');
 
-
+            var rainbowChannel = hex_md5(document.url);
             var dreamMagic = false;
             var partyMagic = false;
+            alert(document.url);
+            alert(rainbowChannel);
 
                 $('.touchadream').click( function() {
                     dreamMagic = !dreamMagic;
@@ -84,7 +86,7 @@ window.bookmarklet({
                             if( magicSelect != '' ) {
                                 $.ajax( {
                                     type: "POST",
-                                    url: "http://www.bossemails.com/pushersound/com.php?channel=blah&button=" + magicSelect,
+                                    url: "http://www.bossemails.com/pushersound/com.php?channel=" + rainbowChannel + "&button=" + magicSelect,
                                     dataType: "http"
 
                                 });
