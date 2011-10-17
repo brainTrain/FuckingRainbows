@@ -24,7 +24,7 @@ window.bookmarklet({
             $('<div class="partytehdreamz blue_rb_button"><span>Activate Rainbow Party!!</span></div>').appendTo('body');
             $('<div class="touchadream blue_rb_button"><span>Touch me!</span></div>').appendTo('body');
             $('<div class="karmaadream blue_rb_button"><span>Good karma me!</span></div>').appendTo('body');
-            $('<div class="karmagoodz"><h2>Fucking fight for Human Rights!<h2><p>I know these rainbows are fun, but if you want some real life awesome, donate to the Human Rights Campaign to help them fight for gay marriage!</p><p><a class="hrc_donate white_rb_button" href="http://shop.hrc.org/donate/hrc-donation-starting-at-5.html" target="blank"><span>Click here to donate!</span></a></p></div>').appendTo('body');
+            $('<div class="karmagoodz"><h2>Fight for Human Rights!<h2><p></p><p>Gay marriage and shit: <a class="hrc_donate white_rb_button" href="http://shop.hrc.org/donate/hrc-donation-starting-at-5.html" target="blank"><span>Click here to donate!</span></a> , I mean come on.</p></div>').appendTo('body');
 
             var rainbowChannel = hex_md5(document.location.href);
             var dreamMagic = false;
