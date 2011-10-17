@@ -114,6 +114,19 @@
     -moz-box-shadow: inset 0 -1px 1px rgba(255,255,255,.15);
     box-shadow: inset 0 -1px 1px rgba(255,255,255,.15);
 }
+.donate_rb_site {
+    background-color: white;
+    color: #494A4A;
+    padding: 10px  20px;
+    font-family: "cooper-black-std-1", "cooper-black-std-2", Helvetica, Arial, sans-serif;
+    text-shadow: 0 -1px 1px rgba(19,65,88,.8);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,.15);
+    -moz-box-shadow: inset 0 -1px 1px rgba(255,255,255,.15);
+    box-shadow: inset 0 -1px 1px rgba(255,255,255,.15);
+}
 
 .hrc_donate {
     color: white;
