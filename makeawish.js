@@ -24,7 +24,7 @@ window.bookmarklet({
             $('<div class="partytehdreamz blue_rb_button badmofo"><span>Activate Rainbow Party!!</span></div>').appendTo('body');
             $('<div class="touchadream blue_rb_button badmofo"><span>Touch me!</span></div>').appendTo('body');
             $('<div class="karmaadream blue_rb_button badmofo"><span>Good karma me!</span></div>').appendTo('body');
-            $('<div class="karmagoodz badmofo"><h2>Fight for Human Rights!<h2><p></p><p>Do you think ' + document.location.href + 'supports gay marriage? <br/> <br/> Sometimes rainbows just aren\'t enough.  <a class="hrc_donate white_rb_button badmofo" href="http://shop.hrc.org/donate/hrc-donation-starting-at-5.html" target="blank"><span>Click here to donate!</span></a> <br/><br/> ...and if the site you happen to be on represents someone who <br/>  happens to be fightin against gay marriage, why not add a little extra to help offset their shortsightedness. </p></div>').appendTo('body');
+            $('<div class="karmagoodz badmofo"><h2>Fight for Human Rights!<h2><p></p><p>Why not help ' + document.location.href + ' support gay marriage?! <br/> <br/> ...because sometimes rainbows just aren\'t enough.  <a class="hrc_donate white_rb_button badmofo" href="http://shop.hrc.org/donate/hrc-donation-starting-at-5.html" target="blank"><span>Click here to donate!</span></a> </p></div>').appendTo('body');
 
             var rainbowChannel = hex_md5(document.location.href);
             var dreamMagic = false;
