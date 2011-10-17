@@ -21,10 +21,10 @@ window.bookmarklet({
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function() {
         $(document).ready( function() {
-            $('<div class="partytehdreamz blue_rb_button"><span>Activate Rainbow Party!!</span></div>').appendTo('body');
-            $('<div class="touchadream blue_rb_button"><span>Touch me!</span></div>').appendTo('body');
-            $('<div class="karmaadream blue_rb_button"><span>Good karma me!</span></div>').appendTo('body');
-            $('<div class="karmagoodz"><h2>Fight for Human Rights!<h2><p></p><p>Gay marriage and shit: <a class="hrc_donate white_rb_button" href="http://shop.hrc.org/donate/hrc-donation-starting-at-5.html" target="blank"><span>Click here to donate!</span></a> , I mean come on.</p></div>').appendTo('body');
+            $('<div class="partytehdreamz blue_rb_button badmofo"><span>Activate Rainbow Party!!</span></div>').appendTo('body');
+            $('<div class="touchadream blue_rb_button badmofo"><span>Touch me!</span></div>').appendTo('body');
+            $('<div class="karmaadream blue_rb_button badmofo"><span>Good karma me!</span></div>').appendTo('body');
+            $('<div class="karmagoodz badmofo"><h2>Fight for Human Rights!<h2><p></p><p>Gay marriage and shit: <a class="hrc_donate white_rb_button badmofo" href="http://shop.hrc.org/donate/hrc-donation-starting-at-5.html" target="blank"><span>Click here to donate!</span></a> , I mean come on.</p></div>').appendTo('body');
 
             var rainbowChannel = hex_md5(document.location.href);
             var dreamMagic = false;
@@ -71,7 +71,7 @@ window.bookmarklet({
                 $('*').live('click', function() {
                     if( dreamMagic && !partyMagic ) {
                         //for jon
-                        if( !$(this).parent().hasClass('blue_rb_button') || !$(this).hasClass('blue_rb_button') || !$(this).parent().hasClass('white_rb_button') || !$(this).hasClass('white_rb_button')) {
+                        if( !$(this).hasClass('badmofo') ) {
                             $(this).toggleClass('catchadream');
                             return false;
                         }
@@ -79,7 +79,7 @@ window.bookmarklet({
                     }
                     if( !dreamMagic && partyMagic ) {
 
-                        if( !$(this).parent().hasClass('blue_rb_button') || !$(this).hasClass('blue_rb_button') || !$(this).parent().hasClass('white_rb_button') || !$(this).hasClass('white_rb_button')) {
+                        if( !$(this).hasClass('badmofo') ) {
 
                             var magicSelect = $(this).html();
                             if( magicSelect != '' ) {
