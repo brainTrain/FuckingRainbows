@@ -1,6 +1,17 @@
+.holdin_arches {
+    position: relative;
+    width: 100%;
+}
+.tellinyous {
+    position: relative;
+    width: 100%;
+    top: 550px;
+    display: inline;
+}
 
 #arch {
-    position: relative;
+    top: 100px;
+    position: absolute;
     z-index: 2;
     height: 400px;
     border-right: 60px solid transparent;
@@ -10,9 +21,9 @@
     margin-left: 5%;
     margin-right: 5%;
 }
-#hole {
-    top: -370px;
-    position: relative;
+.hole {
+    top: 120px;
+    position: absolute;
     background-color: white;
     z-index: 3;
     height: 380px;
@@ -20,27 +31,27 @@
     border-top-left-radius: 1500px;
     border-top-right-radius: 1500px;
     width: 50%;
-    margin-left: 10%;
+    margin-left: 12%;
     margin-right: 10%;
 }
 .title {
-    position: relative;
+    position: absolute;
     z-index: 4;
-    top: -600px;
+    top: 280px;
     margin-left: 25%;
     color: white;
 }
 .instructions {
     position: relative;
     z-index: 4;
-    top: -400px;
+    top: 0px;
+    margin-top: 20px;
     margin-left: 5%;
     margin-right: 5%;
     color: white;
     width: 76%;
 }
 .instructions p {
-    margin-top: 33px;
 
 }
 .suggest {
@@ -48,13 +59,13 @@
     position: relative;
     width: 76%;
     z-index: 4;
-    top: -385px;
+    top: 0px;
+    margin-top: 20px;
     margin-left: 5%;
     margin-right: 5%;
     color: white;
 }
 .suggest p {
-    margin-top: 27px;
 
 }
 .float_left {
@@ -195,6 +206,9 @@
     -moz-transform: translate(0, 4px);
     -o-transform: translate(0, 4px);
     transform: translate(0, 4px);
+}
+.button_pad {
+    margin-top: 7px;
 }
 
 .cloud {
