@@ -25,11 +25,11 @@ body {
     height: 400px;
     border-top-left-radius: 1500px;
     border-top-right-radius: 1500px;
-    width: 75%;
+    width: 71%;
     margin-left: 5%;
     margin-right: 5%;
-    max-width: 900px;
-    min-width: 100px;
+    max-width: 820px;
+    min-width: 332px;
 }
 .hole {
     top: 120px;
@@ -40,9 +40,8 @@ body {
     border-top-left-radius: 1500px;
     border-top-right-radius: 1500px;
     width: 60%;
-    margin-left: 12%;
-    margin-right: 10%;
-    max-width: 900px;
+    margin-left: 9%;
+    max-width: 703px;
     min-width: 100px;
 }
 .title {
