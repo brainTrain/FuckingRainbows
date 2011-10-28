@@ -28,6 +28,8 @@ body {
     width: 75%;
     margin-left: 5%;
     margin-right: 5%;
+    max-width: 900px;
+    min-width: 100px;
 }
 .hole {
     top: 120px;
@@ -40,6 +42,8 @@ body {
     width: 60%;
     margin-left: 12%;
     margin-right: 10%;
+    max-width: 900px;
+    min-width: 100px;
 }
 .title {
     position: absolute;
@@ -48,18 +52,16 @@ body {
     margin-left: 25%;
     color: white;
 }
-.right_arch {
+.rainbow_cloud {
     width: 16%;
     height: 91px;
+    max-width: 900px;
+    min-width: 100px;
 }
 #right_arch {
     position: relative;
     margin-right: 15%;
     z-index: 6;
-}
-.left_arch {
-    width: 16%;
-    height: 91px;
 }
 #left_arch {
     position: relative;
