@@ -59,7 +59,7 @@ window.bookmarklet({
 
                         channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
                          
-                            $("'" + data  + "'").toggleClass('catchadream');
+                            $("'" + data.button + "'").toggleClass('catchadream');
 
                         });
                     }     
