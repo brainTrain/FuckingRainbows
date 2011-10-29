@@ -20,6 +20,15 @@ window.bookmarklet({
     js  : ['http://js.pusherapp.com/1.9/pusher.min.js', 'http://braintrain.github.com/fuckingrainbows/md5-min.js'],
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function() {
+          function objToString (obj) {
+                var str = '';
+                for (var p in obj) {
+                    if (obj.hasOwnProperty(p)) {
+                        str += p + '::' + obj[p] + '\n';
+                    }
+                }
+                return str;
+            } 
         $(document).ready( function() {
             $('<div class="partytehdreamz blue_rb_button badmofo"><span>Activate Rainbow Party!!</span></div>').appendTo('body');
             $('<div class="touchadream blue_rb_button badmofo"><span>Touch me!</span></div>').appendTo('body');
@@ -70,7 +79,7 @@ window.bookmarklet({
                 });
                 $('*').live('click', function() {
                     if( dreamMagic && !partyMagic ) {
-                        //for jon
+                        console.log(objToString (this));
                         if( !$(this).hasClass('badmofo') ) {
                             $(this).toggleClass('catchadream');
                             return false;
