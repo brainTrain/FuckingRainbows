@@ -8,6 +8,7 @@ $(document).ready( function() {
         var safeSelex = taggyWaggy + attributeS;
         
 
+        data.stopPropagation();
         console.log(safeSelex);
 
         if(!$(this).hasClass('badmofo')) {
@@ -15,4 +16,4 @@ $(document).ready( function() {
         }
     });
 
-}).eq(0);
+});

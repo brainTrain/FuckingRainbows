@@ -68,7 +68,7 @@ window.bookmarklet({
                     $('.karmagoodz').toggle();
                     
                 });
-                $('*').live('click', function() {
+                $('*').live('click', function(event) {
                     if( dreamMagic && !partyMagic ) {
                         if( !$(this).hasClass('badmofo') ) {
                             $(this).toggleClass('catchadream');
@@ -87,6 +87,7 @@ window.bookmarklet({
                             }
                             var safeSelex = taggyWaggy + attributeS;
                 
+                            event.stopPropagation();
 
                             //some logging
                             console.log(safeSelex);
