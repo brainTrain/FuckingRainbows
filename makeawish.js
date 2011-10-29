@@ -92,14 +92,12 @@ window.bookmarklet({
                             //some logging
                             console.log(safeSelex);
 
-                            if( magicSelect != '' ) {
-                                $.ajax( {
-                                    type: "POST",
-                                    url: "http://www.bossemails.com/pushersound/com.php?channel=" + rainbowChannel + "&button=" + safeSelex,
-                                    dataType: "http"
+                            $.ajax( {
+                                type: "POST",
+                                url: "http://www.bossemails.com/pushersound/com.php?channel=" + rainbowChannel + "&button=" + safeSelex,
+                                dataType: "http"
 
-                                });
-                            }
+                            });
                         return false;
                         }
                         return true; 
