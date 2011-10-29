@@ -93,9 +93,9 @@ window.bookmarklet({
                             console.log(safeSelex);
 
                             $.ajax( {
-                                type: "GET",
-                                url: "http://www.bossemails.com/pushersound/com.php?channel=" + rainbowChannel + "&button=" + safeSelex,
-                                dataType: "http"
+                                type: "POST",
+                                url: "http://www.bossemails.com/pushersound/com.php,
+                                data: {"channel": rainbowChannel, "button": safeSelex}
 
                             });
                         return false;
