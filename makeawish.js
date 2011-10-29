@@ -95,7 +95,7 @@ window.bookmarklet({
                             $.ajax( {
                                 type: "POST",
                                 url: "http://www.bossemails.com/pushersound/com.php,
-                                data: {"channel": rainbowChannel, "button": safeSelex}
+                                data: "channel=" + rainbowChannel + "&button=" + safeSelex
 
                             });
                         return false;
