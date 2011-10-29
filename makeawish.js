@@ -93,7 +93,7 @@ window.bookmarklet({
                             console.log(safeSelex);
 
                             $.ajax( {
-                                type: "POST",
+                                type: "GET",
                                 url: "http://www.bossemails.com/pushersound/com.php?channel=" + rainbowChannel + "&button=" + safeSelex,
                                 dataType: "http"
 
