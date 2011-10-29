@@ -20,15 +20,6 @@ window.bookmarklet({
     js  : ['http://js.pusherapp.com/1.9/pusher.min.js', 'http://braintrain.github.com/fuckingrainbows/md5-min.js'],
 //  jqpath : 'myCustomjQueryPath.js', <-- option to include your own jquery
     ready : function() {
-          function objToString (obj) {
-                var str = '';
-                for (var p in obj) {
-                    if (obj.hasOwnProperty(p)) {
-                        str += p + '::' + obj[p] + '\n';
-                    }
-                }
-                return str;
-            } 
         $(document).ready( function() {
             $('<div class="partytehdreamz blue_rb_button badmofo"><span>Activate Rainbow Party!!</span></div>').appendTo('body');
             $('<div class="touchadream blue_rb_button badmofo"><span>Touch me!</span></div>').appendTo('body');
@@ -68,7 +59,7 @@ window.bookmarklet({
 
                         channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
                          
-                            $(':contains(' + data + ')').toggleClass('catchadream');
+                            $("'" + data  + "'").toggleClass('catchadream');
 
                         });
                     }     
@@ -79,7 +70,6 @@ window.bookmarklet({
                 });
                 $('*').live('click', function() {
                     if( dreamMagic && !partyMagic ) {
-                        console.log($(this));
                         if( !$(this).hasClass('badmofo') ) {
                             $(this).toggleClass('catchadream');
                             return false;
@@ -90,11 +80,21 @@ window.bookmarklet({
 
                         if( !$(this).hasClass('badmofo') ) {
 
-                            var magicSelect = $(this).html();
+                            var attributeS = "";
+                            var taggyWaggy = this.localName;
+                            for(i=0; i < this.attributes.length; i++) {
+                                attributeS += '[' + this.attributes[i].nodeName + '="' + this.attributes[i].nodeValue + '"]';
+                            }
+                            var safeSelex = taggyWaggy + attributeS;
+                
+
+                            //some logging
+                            console.log(safeSelex);
+
                             if( magicSelect != '' ) {
                                 $.ajax( {
                                     type: "POST",
-                                    url: "http://www.bossemails.com/pushersound/com.php?channel=" + rainbowChannel + "&button=" + magicSelect,
+                                    url: "http://www.bossemails.com/pushersound/com.php?channel=" + rainbowChannel + "&button=" + safeSelex,
                                     dataType: "http"
 
                                 });
@@ -103,7 +103,7 @@ window.bookmarklet({
                         }
                         return true; 
                     }
-                });  
+                }).eq(0);  
 
 
 
