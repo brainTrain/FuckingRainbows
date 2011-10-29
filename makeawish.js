@@ -79,7 +79,7 @@ window.bookmarklet({
                 });
                 $('*').live('click', function() {
                     if( dreamMagic && !partyMagic ) {
-                        console.dir($(this));
+                        console.log($(this));
                         if( !$(this).hasClass('badmofo') ) {
                             $(this).toggleClass('catchadream');
                             return false;
