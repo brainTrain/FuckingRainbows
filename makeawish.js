@@ -91,7 +91,12 @@ window.bookmarklet({
                             event.stopPropagation();
 
                             //some logging
+                            console.log('=================');
+                            console.log(' ');
+                            console.dir(this);
                             console.log(safeSelex);
+                            console.log(' ');
+                            console.log('=================');
 
                             $.ajax( {
                                 type: "POST",
