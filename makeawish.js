@@ -72,7 +72,7 @@ window.bookmarklet({
                             console.log('noslash: ');
                             console.log(noSlash);
                             console.log('===================');
-                            $('"' + data + '"').toggleClass('catchadream');
+                            $("'" + data + "'").toggleClass('catchadream');
 
                         });
                     }     
@@ -96,7 +96,7 @@ window.bookmarklet({
                             var attributeS = "";
                             var taggyWaggy = this.localName;
                             for(i=0; i < this.attributes.length; i++) {
-                                attributeS += "[" + this.attributes[i].nodeName + "='" + this.attributes[i].nodeValue + "']";
+                                attributeS += '[' + this.attributes[i].nodeName + '="' + this.attributes[i].nodeValue + '"]';
                             }
                             var safeSelex = taggyWaggy + attributeS;
                 
