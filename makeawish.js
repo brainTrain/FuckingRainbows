@@ -72,7 +72,8 @@ window.bookmarklet({
                             console.log('noslash: ');
                             console.log(noSlash);
                             console.log('===================');
-                            console.log($("'" + data + "'"));
+                            var crazyIsh = $("'" + data + "'");
+                            console.log(crazyIsh);
                             $("'" + data + "'").toggleClass('catchadream');
 
                         });
