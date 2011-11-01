@@ -107,7 +107,6 @@ window.bookmarklet({
                             $.ajax( {
                                 type: "POST",
                                 dataType: "json",
-                                contentType: "application/json; charset=utf-8",
                                 url: "http://www.bossemails.com/pushersound/com.php",
                                 data: {'channel': 'rainbowChannel', 'button': 'safeSelex'},
                                 crossDomain: true
