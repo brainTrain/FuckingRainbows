@@ -58,8 +58,14 @@ window.bookmarklet({
                         var channel = pusher.subscribe(rainbowChannel);
 
                         channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
+                            /*
+                            for(i=0; i < this.attributes.length; i++) {
+                                attributeS += '[' + this.attributes[i].nodeName + '="' + this.attributes[i].nodeValue + '"]';
+                            }
                          
+                            */
                             console.log('data: ' + data);
+                            console.log(data);
                             $("'" + data + "'").toggleClass('catchadream');
 
                         });
@@ -100,8 +106,10 @@ window.bookmarklet({
 
                             $.ajax( {
                                 type: "POST",
+                                dataType: "json",
+                                contentType: "application/json; charset=utf-8",
                                 url: "http://www.bossemails.com/pushersound/com.php",
-                                data: {"channel": rainbowChannel, "button": safeSelex},
+                                data: {channel: 'rainbowChannel', button: 'safeSelex'},
                                 crossDomain: true
 
                             });

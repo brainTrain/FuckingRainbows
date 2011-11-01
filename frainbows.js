@@ -9,7 +9,11 @@ $(document).ready( function() {
         
 
         data.stopPropagation();
+        console.log('  ');
         console.log(safeSelex);
+        console.log('=================');
+        console.dir(this);
+        console.log('  ');
 
         if(!$(this).hasClass('badmofo')) {
            //$(this).toggleClass('catchadream'); 
