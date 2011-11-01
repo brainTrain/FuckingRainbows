@@ -67,7 +67,7 @@ window.bookmarklet({
                             console.log('data: ');
                             console.log(data);
 
-                            var noSlash = data.replace( '///', '');
+                            var noSlash = data.replace( '\/\\g', '');
                             console.log('noslash: ');
                             console.log(noSlash);
                             $('"' + noSlash + '"').toggleClass('catchadream');
