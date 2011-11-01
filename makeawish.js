@@ -69,7 +69,7 @@ window.bookmarklet({
 
                             console.log('noslash: ');
                             console.log(data);
-                            var noSlash = data.replace( '\\\\', '');
+                            var noSlash = data.replace( '/\\/', '');
                             $("'" + noSlash + "'").toggleClass('catchadream');
 
                         });
