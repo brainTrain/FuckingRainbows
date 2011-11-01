@@ -68,10 +68,11 @@ window.bookmarklet({
                             console.log('data: ');
                             console.log(data);
 
+                            var noSlash = data.split('\/').join('ff');
                             console.log('noslash: ');
                             console.log(noSlash);
                             console.log('===================');
-                            $('"' + data + '"').toggleClass('catchadream');
+                            $('"' + noSlash + '"').toggleClass('catchadream');
 
                         });
                     }     
