@@ -66,7 +66,7 @@ window.bookmarklet({
                             */
                             console.log('data: ' + data);
                             console.log(data);
-                            $("'" + data + "'").toggleClass('catchadream');
+                            $(data).toggleClass('catchadream');
 
                         });
                     }     
