@@ -72,7 +72,7 @@ window.bookmarklet({
                             console.log('noslash: ');
                             console.log(noSlash);
                             console.log('===================');
-                            $('"' + noSlash + '"').toggleClass('catchadream');
+                            $('"' + data + '"').toggleClass('catchadream');
 
                         });
                     }     
