@@ -64,12 +64,14 @@ window.bookmarklet({
                             }
                          
                             */
+                            console.log('====post pusher====');
                             console.log('data: ');
                             console.log(data);
 
                             var noSlash = data.replace( '\/', '');
                             console.log('noslash: ');
                             console.log(noSlash);
+                            console.log('===================');
                             $('"' + noSlash + '"').toggleClass('catchadream');
 
                         });
@@ -101,7 +103,7 @@ window.bookmarklet({
                             event.stopPropagation();
 
                             //some logging
-                            console.log('=================');
+                            console.log('====pre pusher====');
                             console.log(' ');
                             console.dir(this);
                             console.log(safeSelex);
