@@ -64,9 +64,13 @@ window.bookmarklet({
                             }
                          
                             */
-                            console.log('data: ' + data);
+                            console.log('data: ');
                             console.log(data);
-                            $(data).toggleClass('catchadream');
+
+                            console.log('noslash: ');
+                            console.log(data);
+                            var noSlash = data.replace( '/', '');
+                            $("'" + noSlash + "'").toggleClass('catchadream');
 
                         });
                     }     
