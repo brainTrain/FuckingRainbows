@@ -114,10 +114,10 @@ window.bookmarklet({
 
                             $.ajax( {
                                 type: "POST",
-                                //dataType: "json",
+                                dataType: "json",
                                 url: "http://www.bossemails.com/pushersound/com.php",
                                 data: {'channel': rainbowChannel, 'button': safeSelex},
-                                //crossDomain: true
+                                crossDomain: true
 
                             });
                         return false;
