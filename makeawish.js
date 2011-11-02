@@ -58,18 +58,11 @@ window.bookmarklet({
                         var channel = pusher.subscribe(rainbowChannel);
 
                         channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
-                            /*
-                            for(i=0; i < this.attributes.length; i++) {
-                                attributeS += '[' + this.attributes[i].nodeName + '="' + this.attributes[i].nodeValue + '"]';
-                            }
-                         
-                            */
                             console.log('====post pusher====');
                             console.log('data: ');
                             console.log(data);
 
                             var noSlash = data.split('\\').join('');
-                            //var noSlash = data.toString();
                             console.log('noslash: ');
                             console.log(noSlash);
                             console.log('===================');
@@ -101,9 +94,9 @@ window.bookmarklet({
                             for(i=0; i < this.attributes.length; i++) {
                                 attributeS += '[' + this.attributes[i].nodeName + '="' + this.attributes[i].nodeValue + '"]';
                             }
-                            var safeSelex = taggyWaggy + attributeS;
+                            var safeSelex += taggyWaggy + attributeS;
                 
-                            event.stopPropagation();
+                            //event.stopPropagation();
 
                             //some logging
                             console.log('====pre pusher====');
