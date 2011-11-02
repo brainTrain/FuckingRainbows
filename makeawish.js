@@ -68,13 +68,14 @@ window.bookmarklet({
                             console.log('data: ');
                             console.log(data);
 
-                            var noSlash = data.split('\\\\').join('ff');
+                            //var noSlash = data.split('\\\\').join('ff');
+                            var noSlash = "'"+data+"'";
                             console.log('noslash: ');
                             console.log(noSlash);
                             console.log('===================');
                             var crazyIsh = $("'" + data + "'");
                             console.log(crazyIsh);
-                            $("'" + data + "'").toggleClass('catchadream');
+                            $("'" + noSlash + "'").toggleClass('catchadream');
 
                         });
                     }     
