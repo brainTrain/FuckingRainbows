@@ -94,7 +94,7 @@ window.bookmarklet({
                             for(i=0; i < this.attributes.length; i++) {
                                 attributeS += '[' + this.attributes[i].nodeName + '="' + this.attributes[i].nodeValue + '"]';
                             }
-                            var safeSelex += taggyWaggy + attributeS;
+                            var safeSelex = taggyWaggy + attributeS;
                 
                             //event.stopPropagation();
 
