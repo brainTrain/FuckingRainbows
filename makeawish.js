@@ -68,7 +68,7 @@ window.bookmarklet({
                             console.log('data: ');
                             console.log(data);
 
-                            var noSlash = data.split('\\').join('ff');
+                            var noSlash = data.split('\\').join('');
                             //var noSlash = data.toString();
                             console.log('noslash: ');
                             console.log(noSlash);
