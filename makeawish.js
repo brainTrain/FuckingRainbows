@@ -68,8 +68,8 @@ window.bookmarklet({
                             console.log('data: ');
                             console.log(data);
 
-                            //var noSlash = data.split('\\\\').join('ff');
-                            var noSlash = "'"+data+"'";
+                            var noSlash = data.split('\\').join('ff');
+                            //var noSlash = data.toString();
                             console.log('noslash: ');
                             console.log(noSlash);
                             console.log('===================');
