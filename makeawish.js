@@ -106,7 +106,7 @@ window.bookmarklet({
                             console.log('=================');
 
                             */
-                            var jsonz = this;
+                            var jsonz = JSON.stringify(this);
                             $.ajax( {
                                 type: "POST",
                                 dataType: "json",
