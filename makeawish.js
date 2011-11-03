@@ -92,21 +92,19 @@ window.bookmarklet({
                             var safeSelex = [];
                             var attrTree = "";
                             var selectLevel = this;
-                            var j;
                             while(true) {
                                 var attributeS = "";
                                 var taggyWaggy = "";
                                 //var contains = $(this).text();
                                 var contains = "";
-                                taggyWaggy = selectLevel.parentNode.localName;
-                                for(i=0; i < selectLevel.parentNode.attributes.length; i++) {
-                                    attributeS += '[' + selectLevel.parentNode.attributes[i].nodeName + '="' + selectLevel.parentNode.attributes[i].nodeValue + '"]';
+                                taggyWaggy = selectLevel.localName;
+                                for(i=0; i < selectLevel.attributes.length; i++) {
+                                    attributeS += '[' + selectLevel.attributes[i].nodeName + '="' + selectLevel.attributes[i].nodeValue + '"]';
                                 }
                                 //var safeSelex = taggyWaggy + attributeS + ':contains("' + contains + '")' ;
                                     attrTree += taggyWaggy + attributeS;
-                                safeSelex[j] = attrTree + ' ' + safeSelex;
+                                safeSelex += attrTree + ' ' + safeSelex;
                                 selectLevel = selectLevel.parentNode;
-                                j ++;
                                 console.log('  ');
                                 console.log('parentNode  ');
                                 console.log(selectLevel)
