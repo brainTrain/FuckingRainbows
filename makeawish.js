@@ -96,12 +96,12 @@ window.bookmarklet({
                                 var attributeS = "";
                                 //var contains = $(this).text();
                                 var contains = "";
-                                var taggyWaggy = selectLevel.localName;
-                                for(i=0; i < selectLevel.attributes.length; i++) {
-                                    attributeS += '[' + selectLevel.attributes[i].nodeName + '="' + selectLevel.attributes[i].nodeValue + '"]';
+                                var taggyWaggy = selectLevel.parentNode.localName;
+                                for(i=0; i < selectLevel.parentNode.attributes.length; i++) {
+                                    attributeS += '[' + selectLevel.parentNode.attributes[i].nodeName + '="' + selectLevel.parentNode.attributes[i].nodeValue + '"]';
                                 }
                                 //var safeSelex = taggyWaggy + attributeS + ':contains("' + contains + '")' ;
-                                    attrTree += taggyWaggy + attributeS + '     ';
+                                    attrTree += '    ' + taggyWaggy + attributeS + '     ';
                                 safeSelex += attrTree + safeSelex;
                                 selectLevel = selectLevel.parentNode;
                                 console.log('  ');
