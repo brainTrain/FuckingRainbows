@@ -105,7 +105,7 @@ window.bookmarklet({
                                 } else {
                                     safeSelex += taggyWaggy + attributeS + ' ';
                                 }
-                                selectLevel = selectLevel.prev();
+                                selectLevel = $(selectLevel).parent();
                             }
                 
                             //some logging
