@@ -68,8 +68,8 @@ window.bookmarklet({
                             console.log('===================');
                             var crazyIsh = $("'" + data + "'");
                             console.log(crazyIsh);
-                            $("'" + noSlash + "'").stopPropagation().toggleClass('catchadream');
-                            
+                            $("'" + noSlash + "'").toggleClass('catchadream');
+                            data.stopPropagation();
 
                         });
                     }     
