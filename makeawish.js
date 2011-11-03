@@ -92,7 +92,7 @@ window.bookmarklet({
                             var safeSelex = "";
                             var attrTree = "";
                             var selectLevel = this;
-                            while(selectLevel.localName != 'html') {
+                            while(true) {
                                 var attributeS = "";
                                 //var contains = $(this).text();
                                 var contains = "";
@@ -108,6 +108,9 @@ window.bookmarklet({
                                 }
                                 safeSelex += attrTree + safeSelex;
                                 selectLevel = selectLevel.parentNode;
+                                if( selectLevel.localName == 'html') {
+                                    break;
+                                }
                             }
                 
                             //some logging
