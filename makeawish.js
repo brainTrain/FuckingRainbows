@@ -90,12 +90,13 @@ window.bookmarklet({
                         if( !$(this).hasClass('badmofo') ) {
 
                             var attributeS = "";
-                            var contains = $(this).text();
+                            //var contains = $(this).text();
+                            var contains = "";
                             var taggyWaggy = this.localName;
                             for(i=0; i < this.attributes.length; i++) {
                                 attributeS += '[' + this.attributes[i].nodeName + '="' + this.attributes[i].nodeValue + '"]';
                             }
-                            var safeSelex = taggyWaggy + attributeS + ':contains(' + contains + ')' ;
+                            var safeSelex = taggyWaggy + attributeS + ':contains("' + contains + '")' ;
                 
                             //some logging
                             console.log('====pre pusher====');
