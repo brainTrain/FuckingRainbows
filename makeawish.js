@@ -90,6 +90,7 @@ window.bookmarklet({
                         if( !$(this).hasClass('badmofo') ) {
 
                             var safeSelex = "";
+                            var attrTree = "";
                             var selectLevel = this;
                             while(selectLevel.localName != 'body') {
                                 var attributeS = "";
