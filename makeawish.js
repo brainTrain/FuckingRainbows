@@ -89,13 +89,13 @@ window.bookmarklet({
 
                         if( !$(this).hasClass('badmofo') ) {
 
-                            /*
                             var attributeS = "";
+                            var contains = this.textContent;
                             var taggyWaggy = this.localName;
                             for(i=0; i < this.attributes.length; i++) {
                                 attributeS += '[' + this.attributes[i].nodeName + '="' + this.attributes[i].nodeValue + '"]';
                             }
-                            var safeSelex = taggyWaggy + attributeS;
+                            var safeSelex = taggyWaggy + attributeS + ':contains("' + contains + '")' ;
                 
                             //some logging
                             console.log('====pre pusher====');
@@ -105,14 +105,11 @@ window.bookmarklet({
                             console.log(' ');
                             console.log('=================');
 
-                            */
-                            var jsonz = JSON.stringify(this);
                             $.ajax( {
                                 type: "POST",
                                 dataType: "json",
                                 url: "http://www.bossemails.com/pushersound/com.php",
-                                data: {'channel': rainbowChannel, 'button': jsonz},
-                                crossDomain: true
+                                data: {'channel': rainbowChannel, 'button': safeSelex},
 
                             });
                         return false;
