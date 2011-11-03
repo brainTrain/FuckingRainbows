@@ -92,7 +92,7 @@ window.bookmarklet({
                             var safeSelex = "";
                             var attrTree = "";
                             var selectLevel = this;
-                            while(selectLevel.localName != 'body') {
+                            while(selectLevel.localName != 'html') {
                                 var attributeS = "";
                                 //var contains = $(this).text();
                                 var contains = "";
@@ -104,7 +104,7 @@ window.bookmarklet({
                                 if( selectLevel.localName == 'body' ) {
                                     attrTree += taggyWaggy + attributeS;
                                 } else {
-                                    attrTree += '' + taggyWaggy + attributeS;
+                                    attrTree += taggyWaggy + attributeS + '';
                                 }
                                 safeSelex += attrTree + safeSelex;
                                 selectLevel = selectLevel.parentNode;
