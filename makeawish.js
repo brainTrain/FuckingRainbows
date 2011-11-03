@@ -91,7 +91,7 @@ window.bookmarklet({
 
                             var safeSelex;
                             var selectLevel = this;
-                            while(selectLevel.localName != 'html') {
+                            while(selectLevel.localName != 'body') {
                                 var attributeS = "";
                                 //var contains = $(this).text();
                                 var contains = "";
