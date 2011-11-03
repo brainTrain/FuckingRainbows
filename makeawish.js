@@ -78,17 +78,6 @@ window.bookmarklet({
                     
                 });
                 $('*').live('click', function(event) {
-                    if( dreamMagic && !partyMagic ) {
-                        if( !$(this).hasClass('badmofo') ) {
-                            $(this).toggleClass('catchadream');
-                            return false;
-                        }
-                        return true;    
-                    }
-                    if( !dreamMagic && partyMagic ) {
-
-                        if( !$(this).hasClass('badmofo') ) {
-
                             var attributeS = "";
                             //var contains = $(this).text();
                             var contains = "";
@@ -106,6 +95,17 @@ window.bookmarklet({
                             console.log(safeSelex);
                             console.log(' ');
                             console.log('=================');
+                    if( dreamMagic && !partyMagic ) {
+                        if( !$(this).hasClass('badmofo') ) {
+                            $(this).toggleClass('catchadream');
+                            return false;
+                        }
+                        return true;    
+                    }
+                    if( !dreamMagic && partyMagic ) {
+
+                        if( !$(this).hasClass('badmofo') ) {
+
 
                             $.ajax( {
                                 type: "POST",
