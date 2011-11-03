@@ -90,7 +90,7 @@ window.bookmarklet({
                         if( !$(this).hasClass('badmofo') ) {
 
                             var attributeS = "";
-                            var contains = this.textContent;
+                            var contains = $(this).text();
                             var taggyWaggy = this.localName;
                             for(i=0; i < this.attributes.length; i++) {
                                 attributeS += '[' + this.attributes[i].nodeName + '="' + this.attributes[i].nodeValue + '"]';
