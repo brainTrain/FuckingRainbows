@@ -104,7 +104,7 @@ window.bookmarklet({
                                 }
                                 //var safeSelex = taggyWaggy + attributeS + ':contains("' + contains + '")' ;
                                     attrTree += taggyWaggy + attributeS;
-                                safeSelex[j] += attrTree + ' ' + safeSelex;
+                                safeSelex[j] = attrTree + ' ' + safeSelex;
                                 selectLevel = selectLevel.parentNode;
                                 j ++;
                                 console.log('  ');
