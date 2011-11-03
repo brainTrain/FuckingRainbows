@@ -89,7 +89,7 @@ window.bookmarklet({
 
                         if( !$(this).hasClass('badmofo') ) {
 
-                            var safeSelex = [];
+                            var safeSelex = "";
                             var attrTree = "";
                             var selectLevel = this;
                             var j = 0;
@@ -104,7 +104,7 @@ window.bookmarklet({
                                 }
                                 //var safeSelex = taggyWaggy + attributeS + ':contains("' + contains + '")' ;
                                     attrTree += taggyWaggy + attributeS;
-                                safeSelex[j] = attrTree + ' ' + safeSelex;
+                                safeSelex = attrTree + ' ' + safeSelex;
                                 selectLevel = selectLevel.parentNode;
                                 j ++;
                                 console.log('  ');
@@ -116,6 +116,7 @@ window.bookmarklet({
                             }
                 
                             //some logging
+                            console.log(j);
                             console.log('====pre pusher====');
                             console.log(' ');
                             console.dir(this);
