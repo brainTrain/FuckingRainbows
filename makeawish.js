@@ -101,11 +101,7 @@ window.bookmarklet({
                                     attributeS += '[' + selectLevel.attributes[i].nodeName + '="' + selectLevel.attributes[i].nodeValue + '"]';
                                 }
                                 //var safeSelex = taggyWaggy + attributeS + ':contains("' + contains + '")' ;
-                                if( selectLevel.localName == 'body' ) {
-                                    attrTree += taggyWaggy + attributeS;
-                                } else {
-                                    attrTree += taggyWaggy + attributeS + '';
-                                }
+                                    attrTree += taggyWaggy + attributeS + 'FUCK';
                                 safeSelex += attrTree + safeSelex;
                                 selectLevel = selectLevel.parentNode;
                                 if( selectLevel.localName == 'html') {
