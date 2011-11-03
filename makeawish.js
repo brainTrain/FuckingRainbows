@@ -92,6 +92,7 @@ window.bookmarklet({
                             var safeSelex = [];
                             var attrTree = "";
                             var selectLevel = this;
+                            var j = 0;
                             while(true) {
                                 var attributeS = "";
                                 var taggyWaggy = "";
@@ -103,8 +104,9 @@ window.bookmarklet({
                                 }
                                 //var safeSelex = taggyWaggy + attributeS + ':contains("' + contains + '")' ;
                                     attrTree += taggyWaggy + attributeS;
-                                safeSelex += attrTree + ' ' + safeSelex;
+                                safeSelex[j] += attrTree + ' ' + safeSelex;
                                 selectLevel = selectLevel.parentNode;
+                                j ++;
                                 console.log('  ');
                                 console.log('parentNode  ');
                                 console.log(selectLevel)
