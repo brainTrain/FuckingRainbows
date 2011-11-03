@@ -95,7 +95,7 @@ window.bookmarklet({
                             for(i=0; i < this.attributes.length; i++) {
                                 attributeS += '[' + this.attributes[i].nodeName + '="' + this.attributes[i].nodeValue + '"]';
                             }
-                            var safeSelex = taggyWaggy + attributeS + ':contains("' + contains + '")' ;
+                            var safeSelex = taggyWaggy + attributeS + ':contains(' + contains + ')' ;
                 
                             //some logging
                             console.log('====pre pusher====');
