@@ -92,11 +92,13 @@ window.bookmarklet({
                             var safeSelex = [];
                             var attrTree = "";
                             var selectLevel = this;
+                            var j;
                             while(true) {
                                 var attributeS = "";
+                                var taggyWaggy = "";
                                 //var contains = $(this).text();
                                 var contains = "";
-                                var taggyWaggy = selectLevel.parentNode.localName;
+                                taggyWaggy = selectLevel.parentNode.localName;
                                 for(i=0; i < selectLevel.parentNode.attributes.length; i++) {
                                     attributeS += '[' + selectLevel.parentNode.attributes[i].nodeName + '="' + selectLevel.parentNode.attributes[i].nodeValue + '"]';
                                 }
