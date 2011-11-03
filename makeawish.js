@@ -89,7 +89,7 @@ window.bookmarklet({
 
                         if( !$(this).hasClass('badmofo') ) {
 
-                            var safeSelex;
+                            var safeSelex = "";
                             var selectLevel = this;
                             while(selectLevel.localName != 'body') {
                                 var attributeS = "";
@@ -101,10 +101,11 @@ window.bookmarklet({
                                 }
                                 //var safeSelex = taggyWaggy + attributeS + ':contains("' + contains + '")' ;
                                 if( selectLevel.localName == 'body' ) {
-                                    safeSelex += taggyWaggy + attributeS;
+                                    attrTree += taggyWaggy + attributeS;
                                 } else {
-                                    safeSelex += taggyWaggy + attributeS + ' ';
+                                    attrTree += '' + taggyWaggy + attributeS;
                                 }
+                                safeSelex += attrTree + safeSelex;
                                 selectLevel = selectLevel.parentNode;
                             }
                 
