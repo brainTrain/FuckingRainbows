@@ -89,15 +89,24 @@ window.bookmarklet({
 
                         if( !$(this).hasClass('badmofo') ) {
 
-                            var attributeS = "";
-                            //var contains = $(this).text();
-                            var contains = "";
-                            var taggyWaggy = this.localName;
-                            for(i=0; i < this.attributes.length; i++) {
-                                attributeS += '[' + this.attributes[i].nodeName + '="' + this.attributes[i].nodeValue + '"]';
+                            var safeSelex;
+                            var selectLevel = this;
+                            while(selectLevel.localName != 'html') {
+                                var attributeS = "";
+                                //var contains = $(this).text();
+                                var contains = "";
+                                var taggyWaggy = selectLevel.localName;
+                                for(i=0; i < selectLevel.attributes.length; i++) {
+                                    attributeS += '[' + selectLevel.attributes[i].nodeName + '="' + selectLevel.attributes[i].nodeValue + '"]';
+                                }
+                                //var safeSelex = taggyWaggy + attributeS + ':contains("' + contains + '")' ;
+                                if( selectLevel.localName == 'body' ) {
+                                    safeSelex += taggyWaggy + attributeS;
+                                } else {
+                                    safeSelex += taggyWaggy + attributeS + ' ';
+                                }
+                                selectLevel = selectLevel.parent();
                             }
-                            //var safeSelex = taggyWaggy + attributeS + ':contains("' + contains + '")' ;
-                            var safeSelex = taggyWaggy + attributeS;
                 
                             //some logging
                             console.log('====pre pusher====');
