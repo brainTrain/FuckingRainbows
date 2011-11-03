@@ -89,6 +89,7 @@ window.bookmarklet({
 
                         if( !$(this).hasClass('badmofo') ) {
 
+                            /*
                             var attributeS = "";
                             var taggyWaggy = this.localName;
                             for(i=0; i < this.attributes.length; i++) {
@@ -104,16 +105,16 @@ window.bookmarklet({
                             console.log(' ');
                             console.log('=================');
 
-                            /*
+                            */
+                            var jsonz = this;
                             $.ajax( {
                                 type: "POST",
                                 dataType: "json",
                                 url: "http://www.bossemails.com/pushersound/com.php",
-                                data: {'channel': rainbowChannel, 'button': safeSelex},
+                                data: {'channel': rainbowChannel, 'button': jsonz},
                                 crossDomain: true
 
                             });
-                            */
                         return false;
                         }
                         return true; 
