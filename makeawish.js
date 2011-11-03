@@ -104,6 +104,7 @@ window.bookmarklet({
                             console.log(' ');
                             console.log('=================');
 
+                            /*
                             $.ajax( {
                                 type: "POST",
                                 dataType: "json",
@@ -112,6 +113,7 @@ window.bookmarklet({
                                 crossDomain: true
 
                             });
+                            */
                         return false;
                         }
                         return true; 
