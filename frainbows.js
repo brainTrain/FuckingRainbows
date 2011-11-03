@@ -5,10 +5,11 @@ $(document).ready( function() {
         for(i=0; i < this.attributes.length; i++) {
             attributeS += '[' + this.attributes[i].nodeName + '="' + this.attributes[i].nodeValue + '"]';
         }
+        var safeSelex =[];
         var safeSelex = taggyWaggy + attributeS;
         
 
-        data.stopPropagation();
+        //data.stopPropagation();
         console.log('  ');
         console.log(safeSelex);
         console.log('=================');

@@ -96,8 +96,6 @@ window.bookmarklet({
                             }
                             var safeSelex = taggyWaggy + attributeS;
                 
-                            //event.stopPropagation();
-
                             //some logging
                             console.log('====pre pusher====');
                             console.log(' ');
