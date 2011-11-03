@@ -101,9 +101,12 @@ window.bookmarklet({
                                     attributeS += '[' + selectLevel.attributes[i].nodeName + '="' + selectLevel.attributes[i].nodeValue + '"]';
                                 }
                                 //var safeSelex = taggyWaggy + attributeS + ':contains("' + contains + '")' ;
-                                    attrTree += taggyWaggy + attributeS + 'FUCK';
+                                    attrTree += taggyWaggy + attributeS + '     ';
                                 safeSelex += attrTree + safeSelex;
                                 selectLevel = selectLevel.parentNode;
+                                console.log('  ');
+                                console.log('parentNode  ');
+                                console.log(selectLevel)
                                 if( selectLevel.localName == 'html') {
                                     break;
                                 }
