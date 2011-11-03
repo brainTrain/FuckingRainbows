@@ -90,10 +90,10 @@ window.bookmarklet({
                         if( !$(this).hasClass('badmofo') ) {
 
                             var safeSelex = [];
-                            var attrTree = "";
                             var selectLevel = this;
                             var j = 0;
                             while(true) {
+                                var attrTree = "";
                                 var attributeS = "";
                                 var taggyWaggy = "";
                                 //var contains = $(this).text();
