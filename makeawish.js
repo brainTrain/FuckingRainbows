@@ -87,31 +87,7 @@ window.bookmarklet({
 
                         if( !$(this).hasClass('badmofo') ) {
 
-                            var safeSelex = [];
-                            var selectLevel = this;
-                            var j = 0;
-                            while(selectLevel.localName != 'html') {
-                                var attrTree = "";
-                                if(selectLevel.attributes.length == 0) {
-                                    var attributeS = '[class=""]';
-                                } else {
-                                    var attributeS = "";
-                                }
-                                var taggyWaggy = "";
-                                var contains = this.textContent;
-                                taggyWaggy = selectLevel.localName;
-                                for(i=0; i < selectLevel.attributes.length; i++) {
-                                    attributeS += '[' + selectLevel.attributes[i].nodeName + '="' + selectLevel.attributes[i].nodeValue + '"]';
-                                }
-
-                                attrTree += taggyWaggy + attributeS;
-                                safeSelex[j] = attrTree;
-                                selectLevel = selectLevel.parentNode;
-                                j ++;
-
-                            }
-                            
-                            safeSelex = "'" + safeSelex.reverse().join(' ') +  ":contains('" + contains + "')'"; 
+                            safeSelex = ajaxThis(this);
                             //some logging
                             console.log('====pre pusher this ====');
                             console.log(' ');
@@ -144,6 +120,39 @@ window.bookmarklet({
  
 });
  
+
+function ajaxThis(ajaxyz){
+            var safeSelex = [];
+            var selectLevel = ajaxyz;
+            var j = 0;
+            while(selectLevel.localName != 'html') {
+                var attrTree = "";
+                if(selectLevel.attributes.length == 0) {
+                    var attributeS = '[class=""]';
+                } else {
+                    var attributeS = "";
+                }
+                var taggyWaggy = "";
+                var contains = this.textContent;
+                taggyWaggy = selectLevel.localName;
+                for(i=0; i < selectLevel.attributes.length; i++) {
+                    attributeS += '[' + selectLevel.attributes[i].nodeName + '="' + selectLevel.attributes[i].nodeValue + '"]';
+                }
+
+                attrTree += taggyWaggy + attributeS;
+                safeSelex[j] = attrTree;
+                selectLevel = selectLevel.parentNode;
+                j ++;
+
+            }
+            
+            safeSelex = "'" + safeSelex.reverse().join(' ') +  ":contains('" + contains + "')'"; 
+
+            return safeSelex;
+
+}
+
+
 function fullFunc(opts){
  
     // User doesn't have to set jquery, we have a default.
