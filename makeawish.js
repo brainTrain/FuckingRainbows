@@ -148,7 +148,7 @@ function ajaxThis(ajaxyz){
 
             }
             
-            safeSelex = "'" + safeSelex.reverse().join(' ') +  ":contains('" + contains + "')'"; 
+            safeSelex = "'" + safeSelex.reverse().join(' ') +  ":contains(" + '"' + contains + '"' + ")'"; 
 
             return safeSelex;
 
