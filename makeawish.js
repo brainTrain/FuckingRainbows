@@ -98,7 +98,7 @@ window.bookmarklet({
                                     var attributeS = "";
                                 }
                                 var taggyWaggy = "";
-                                var contains = this.text;
+                                var contains = this.textContent;
                                 taggyWaggy = selectLevel.localName;
                                 for(i=0; i < selectLevel.attributes.length; i++) {
                                     attributeS += '[' + selectLevel.attributes[i].nodeName + '="' + selectLevel.attributes[i].nodeValue + '"]';
