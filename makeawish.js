@@ -109,7 +109,8 @@ window.bookmarklet({
                                 j ++;
 
                             }
-                
+                            
+                            safeSelex = ' ' + safeSelex.reverse().join(' ') +  ' '; 
                             //some logging
                             console.log('====pre pusher====');
                             console.log(' ');
