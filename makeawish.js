@@ -112,9 +112,13 @@ window.bookmarklet({
                             
                             safeSelex = ' ' + safeSelex.reverse().join(' ') +  ' '; 
                             //some logging
-                            console.log('====pre pusher====');
+                            console.log('====pre pusher this ====');
                             console.log(' ');
                             console.dir(this);
+                            console.log(' ');
+                            console.log('====pre pusher safeSelex ====');
+                            console.log(' ');
+                            console.dir(safeSelex);
                             console.log(' ');
                             console.log('=================');
 
