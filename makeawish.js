@@ -91,11 +91,7 @@ window.bookmarklet({
 
                             var safeSelex = [];
                             var selectLevel = this;
-                            var j = selectLevel.attributes.length;
-                            console.log('jzzz');
-                            console.log(j);
-                            console.log('selectLevel.attributes.length');
-                            console.log(selectLevel.attributes.length);
+                            var j = 0;
                             while(selectLevel.localName != 'html') {
                                 var attrTree = "";
                                 var attributeS = "";
@@ -110,21 +106,15 @@ window.bookmarklet({
                                 attrTree += taggyWaggy + attributeS;
                                 safeSelex[j] = attrTree;
                                 selectLevel = selectLevel.parentNode;
-                                j --;
+                                j ++;
 
-                                console.log('j');
-                                console.log(j);
-                                console.log('  ');
-                                console.log('safeselex ');
-                                console.log(safeSelex)
                             }
                 
                             //some logging
-                            console.log('big j:');
-                            console.log(j);
                             console.log('====pre pusher====');
                             console.log(' ');
                             console.dir(this);
+                            console.log(' ');
                             console.log('=================');
 
 
