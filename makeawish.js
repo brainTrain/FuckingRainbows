@@ -99,7 +99,7 @@ window.bookmarklet({
                                 }
                                 var taggyWaggy = "";
                                 var contains = $(this).text();
-                                var contains = "";
+                                //var contains = "";
                                 taggyWaggy = selectLevel.localName;
                                 for(i=0; i < selectLevel.attributes.length; i++) {
                                     attributeS += '[' + selectLevel.attributes[i].nodeName + '="' + selectLevel.attributes[i].nodeValue + '"]';
@@ -112,7 +112,7 @@ window.bookmarklet({
 
                             }
                             
-                            safeSelex = "'" + safeSelex.reverse().join(' ') +  ":contains("' + contains + '")"; 
+                            safeSelex = "'" + safeSelex.reverse().join(' ') +  ":contains(" + contains + ")'"; 
                             //some logging
                             console.log('====pre pusher this ====');
                             console.log(' ');
