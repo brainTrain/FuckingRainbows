@@ -166,14 +166,10 @@ function ajaxThis(ajaxyz){
                 j ++;
 
             }
-            console.log('tagterm ');
-            console.log(tagTerm);
-            console.log('does it restart?');
-            console.log(ajaxyz.localName);
             
             //build the safe selector going from bodly, down to the object.. 
             if(tagTerm == 'img') {
-                safeSelex = "'" + safeSelex.reverse().join(' '); 
+                safeSelex = "'" + safeSelex.reverse().join(' ') + "'"; 
             } else {
                 safeSelex = "'" + safeSelex.reverse().join(' ') +  ":contains(" + '"' + contains + '"' + ")'"; 
             }
