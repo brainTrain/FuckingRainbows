@@ -133,7 +133,7 @@ function ajaxThis(ajaxyz){
                     var attributeS = "";
                 }
                 var taggyWaggy = "";
-                var contains = this.textContent;
+                var contains = ajaxyz.textContent;
                 taggyWaggy = selectLevel.localName;
                 for(i=0; i < selectLevel.attributes.length; i++) {
                     attributeS += '[' + selectLevel.attributes[i].nodeName + '="' + selectLevel.attributes[i].nodeValue + '"]';
