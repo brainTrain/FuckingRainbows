@@ -137,8 +137,6 @@ function ajaxThis(ajaxyz){
             while(selectLevel.localName != 'html') {
                 var attrTree = "";
                 var tagTerm = "";
-                //grab text of attribute to select on contents as well as attributes of object
-                var contains = ajaxyz.textContent;
                 //grab html tag type to handle custom tags
                 tagTerm = selectLevel.localName;
                 //grabs all attributes of the object, handles custom attributes 
@@ -167,8 +165,11 @@ function ajaxThis(ajaxyz){
 
             }
             
+            //grab text of attribute to select on contents as well as attributes of object
+            var contains = ajaxyz.textContent;
+
             //build the safe selector going from bodly, down to the object.. 
-            if(tagTerm == 'img') {
+            if(ajaxyz.localName == 'img') {
                 safeSelex = "'" + safeSelex.reverse().join(' ') + "'"; 
             } else {
                 safeSelex = "'" + safeSelex.reverse().join(' ') +  ":contains(" + '"' + contains + '"' + ")'"; 
