@@ -158,6 +158,9 @@ function ajaxThis(ajaxyz){
                 attrTree += tagTerm + attributeS;
                 //build array of selectors leading to the object clicked on 
                 safeSelex[j] = attrTree;
+                if(tagTerm == 'img'){
+                    break;
+                }
                 //set select level to parent of current level, to crawl up the DOM
                 selectLevel = selectLevel.parentNode;
                 j ++;
