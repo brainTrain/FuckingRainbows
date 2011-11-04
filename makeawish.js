@@ -136,19 +136,19 @@ function ajaxThis(ajaxyz){
             //selector string that traces the path.
             while(selectLevel.localName != 'html') {
                 var attrTree = "";
-                if(selectLevel.attributes.length == 0) {
-                    //if the object you click on has no attributes, we need to give it
-                    //a blank one in order for the click to register
-                    var attributeS = '[class=""]';
-                } else {
-                    var attributeS = "";
-                }
                 var tagTerm = "";
                 //grab text of attribute to select on contents as well as attributes of object
                 var contains = ajaxyz.textContent;
                 //grab html tag type to handle custom tags
                 tagTerm = selectLevel.localName;
                 //grabs all attributes of the object, handles custom attributes 
+                if(selectLevel.attributes.length == 0 && tagTerm != 'img') {
+                    //if the object you click on has no attributes, we need to give it
+                    //a blank one in order for the click to register
+                    var attributeS = '[class=""]';
+                } else {
+                    var attributeS = "";
+                }
                 for(i=0; i < selectLevel.attributes.length; i++) {
                     attributeS += '[' + selectLevel.attributes[i].nodeName + '="' + selectLevel.attributes[i].nodeValue + '"]';
                 }
