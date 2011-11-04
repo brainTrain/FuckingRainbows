@@ -92,7 +92,11 @@ window.bookmarklet({
                             var j = 0;
                             while(selectLevel.localName != 'html') {
                                 var attrTree = "";
-                                var attributeS = "";
+                                if(selectLevel.attributes.length == 0) {
+                                    var attributeS = '[class=""]';
+                                } else {
+                                    var attributeS = "";
+                                }
                                 var taggyWaggy = "";
                                 //var contains = $(this).text();
                                 var contains = "";
