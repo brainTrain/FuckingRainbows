@@ -110,7 +110,7 @@ window.bookmarklet({
 
                             }
                             
-                            safeSelex = '"' + safeSelex.reverse().join(' ') +  '"'; 
+                            safeSelex = "'" + safeSelex.reverse().join(' ') +  "'"; 
                             //some logging
                             console.log('====pre pusher this ====');
                             console.log(' ');
