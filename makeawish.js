@@ -91,8 +91,8 @@ window.bookmarklet({
 
                             var safeSelex = [];
                             var selectLevel = this;
-                            var j = 0;
-                            while(true) {
+                            var j = selectLevel.attributeS.length;
+                            while(selectLevel.localName != 'html') {
                                 var attrTree = "";
                                 var attributeS = "";
                                 var taggyWaggy = "";
@@ -103,13 +103,11 @@ window.bookmarklet({
                                     attributeS += '[' + selectLevel.attributes[i].nodeName + '="' + selectLevel.attributes[i].nodeValue + '"]';
                                 }
                                 //var safeSelex = taggyWaggy + attributeS + ':contains("' + contains + '")' ;
-                                    attrTree += taggyWaggy + attributeS;
+                                attrTree += taggyWaggy + attributeS;
                                 safeSelex[j] = attrTree;
                                 selectLevel = selectLevel.parentNode;
-                                j ++;
-                                if( selectLevel.localName == 'html') {
-                                    break;
-                                }
+                                j --;
+
                                 console.log('  ');
                                 console.log('parentNode  ');
                                 console.log(selectLevel)
