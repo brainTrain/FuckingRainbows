@@ -158,9 +158,9 @@ function ajaxThis(ajaxyz){
                 attrTree += tagTerm + attributeS;
                 //build array of selectors leading to the object clicked on 
                 safeSelex[j] = attrTree;
-                if(tagTerm == 'img'){
-                    break;
-                }
+               // if(tagTerm == 'img'){
+                //    break;
+               // }
                 //set select level to parent of current level, to crawl up the DOM
                 selectLevel = selectLevel.parentNode;
                 j ++;
@@ -168,11 +168,11 @@ function ajaxThis(ajaxyz){
             }
             
             //build the safe selector going from bodly, down to the object.. 
-            if(tagTerm == 'img') {
-                safeSelex = "'" + safeSelex.reverse().join(' ') + "'"; 
-            } else {
+           // if(tagTerm == 'img') {
+            //    safeSelex = "'" + safeSelex.reverse().join(' ') + "'"; 
+           // } else {
                 safeSelex = "'" + safeSelex.reverse().join(' ') +  ":contains(" + '"' + contains + '"' + ")'"; 
-            }
+            //}
 
             return safeSelex;
 
