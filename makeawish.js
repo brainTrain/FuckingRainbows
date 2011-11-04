@@ -121,33 +121,50 @@ window.bookmarklet({
 });
  
 function ajaxSelect(ajarx){
+    //remove escape character so quotes can be used
     return ajarx.split('\\').join('');
 }
+
 function ajaxThis(ajaxyz){
+            
             var safeSelex = [];
+            //set selectLevel equal to object
             var selectLevel = ajaxyz;
+            //counter to map DOM
             var j = 0;
+            //while loop traces map from object to html, and builds a 
+            //selector string that traces the path.
             while(selectLevel.localName != 'html') {
                 var attrTree = "";
                 if(selectLevel.attributes.length == 0) {
+                    //if the object you click on has no attributes, we need to give it
+                    //a blank one in order for the click to register
                     var attributeS = '[class=""]';
                 } else {
                     var attributeS = "";
                 }
-                var taggyWaggy = "";
+                var tagTerm = "";
+                //grab text of attribute to select on contents as well as attributes of object
                 var contains = ajaxyz.textContent;
-                taggyWaggy = selectLevel.localName;
+                //grab html tag type to handle custom tags
+                tagTerm = selectLevel.localName;
+                //grabs all attributes of the object, handles custom attributes 
                 for(i=0; i < selectLevel.attributes.length; i++) {
                     attributeS += '[' + selectLevel.attributes[i].nodeName + '="' + selectLevel.attributes[i].nodeValue + '"]';
                 }
 
-                attrTree += taggyWaggy + attributeS;
+                //attribute tree puts tag and attributes together to form a selector 
+                //eg a[class="whatevz"][id="thing229"][lolzwhatever="thiswillworkforwhatever"] 
+                attrTree += tagTerm + attributeS;
+                //build array of selectors leading to the object clicked on 
                 safeSelex[j] = attrTree;
+                //set select level to parent of current level, to crawl up the DOM
                 selectLevel = selectLevel.parentNode;
                 j ++;
 
             }
             
+            //build the safe selector going from bodly, down to the object.. 
             safeSelex = "'" + safeSelex.reverse().join(' ') +  ":contains(" + '"' + contains + '"' + ")'"; 
 
             return safeSelex;
