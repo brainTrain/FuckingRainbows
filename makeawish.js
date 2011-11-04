@@ -109,8 +109,8 @@ window.bookmarklet({
                                 j --;
 
                                 console.log('  ');
-                                console.log('parentNode  ');
-                                console.log(selectLevel)
+                                console.log('safeselex ');
+                                console.log(safeSelex)
                             }
                 
                             //some logging
