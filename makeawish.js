@@ -108,18 +108,19 @@ window.bookmarklet({
                                 selectLevel = selectLevel.parentNode;
                                 j --;
 
+                                console.log('j');
+                                console.log(j);
                                 console.log('  ');
                                 console.log('safeselex ');
                                 console.log(safeSelex)
                             }
                 
                             //some logging
+                            console.log('big j:');
                             console.log(j);
                             console.log('====pre pusher====');
                             console.log(' ');
                             console.dir(this);
-                            console.log(safeSelex);
-                            console.log(' ');
                             console.log('=================');
 
 
