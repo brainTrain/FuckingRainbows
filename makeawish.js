@@ -62,7 +62,7 @@ window.bookmarklet({
                             console.log('data: ');
                             console.log(data);
 
-                            var noSlash = data.split('\\').join('');
+                            var noSlash = ajaxSelect(data);
                             console.log('noslash: ');
                             console.log(noSlash);
                             console.log('===================');
@@ -120,7 +120,9 @@ window.bookmarklet({
  
 });
  
-
+function ajaxSelect(ajarx){
+    return ajarx.split('\\').join('');
+}
 function ajaxThis(ajaxyz){
             var safeSelex = [];
             var selectLevel = ajaxyz;
