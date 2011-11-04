@@ -142,7 +142,7 @@ function ajaxThis(ajaxyz){
                 //grab html tag type to handle custom tags
                 tagTerm = selectLevel.localName;
                 //grabs all attributes of the object, handles custom attributes 
-                if(selectLevel.attributes.length == 0 && tagTerm != 'img') {
+                if(selectLevel.attributes.length == 0) {
                     //if the object you click on has no attributes, we need to give it
                     //a blank one in order for the click to register
                     var attributeS = '[class=""]';
@@ -166,9 +166,17 @@ function ajaxThis(ajaxyz){
                 j ++;
 
             }
+            console.log('tagterm ');
+            console.log(tagTerm);
+            console.log('does it restart?');
+            console.log(ajaxyz.localName);
             
             //build the safe selector going from bodly, down to the object.. 
-            safeSelex = "'" + safeSelex.reverse().join(' ') +  ":contains(" + '"' + contains + '"' + ")'"; 
+            if(tagTerm == 'img') {
+                safeSelex = "'" + safeSelex.reverse().join(' '); 
+            } else {
+                safeSelex = "'" + safeSelex.reverse().join(' ') +  ":contains(" + '"' + contains + '"' + ")'"; 
+            }
 
             return safeSelex;
 
