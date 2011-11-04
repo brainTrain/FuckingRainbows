@@ -92,6 +92,10 @@ window.bookmarklet({
                             var safeSelex = [];
                             var selectLevel = this;
                             var j = selectLevel.attributes.length;
+                            console.log('jzzz');
+                            console.log(j);
+                            console.log('selectLevel.attributes.length');
+                            console.log(selectLevel.attributes.length);
                             while(selectLevel.localName != 'html') {
                                 var attrTree = "";
                                 var attributeS = "";
