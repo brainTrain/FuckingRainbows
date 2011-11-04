@@ -104,7 +104,7 @@ window.bookmarklet({
                                 for(i=0; i < selectLevel.attributes.length; i++) {
                                     attributeS += '[' + selectLevel.attributes[i].nodeName + '="' + selectLevel.attributes[i].nodeValue + '"]';
                                 }
-                                var safeSelex = taggyWaggy + attributeS + ':contains("' + contains + '")' ;
+
                                 attrTree += taggyWaggy + attributeS;
                                 safeSelex[j] = attrTree;
                                 selectLevel = selectLevel.parentNode;
@@ -112,7 +112,7 @@ window.bookmarklet({
 
                             }
                             
-                            safeSelex = "'" + safeSelex.reverse().join(' ') +  "'"; 
+                            safeSelex = "'" + safeSelex.reverse().join(' ') +  ":contains("' + contains + '")"; 
                             //some logging
                             console.log('====pre pusher this ====');
                             console.log(' ');
