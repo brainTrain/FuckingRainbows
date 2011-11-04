@@ -66,9 +66,7 @@ window.bookmarklet({
                             console.log('noslash: ');
                             console.log(noSlash);
                             console.log('===================');
-                            var crazyIsh = $("'" + data + "'");
-                            console.log(crazyIsh);
-                            $("" + noSlash + "").toggleClass('catchadream');
+                            $(noSlash).toggleClass('catchadream');
 
                         });
                     }     
