@@ -168,11 +168,11 @@ function ajaxThis(ajaxyz){
             }
             
             //build the safe selector going from bodly, down to the object.. 
-           // if(tagTerm == 'img') {
-            //    safeSelex = "'" + safeSelex.reverse().join(' ') + "'"; 
-           // } else {
+            if(tagTerm == 'img') {
+                safeSelex = "'" + safeSelex.reverse().join(' ') + "'"; 
+            } else {
                 safeSelex = "'" + safeSelex.reverse().join(' ') +  ":contains(" + '"' + contains + '"' + ")'"; 
-            //}
+            }
 
             return safeSelex;
 
