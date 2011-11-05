@@ -58,14 +58,10 @@ window.bookmarklet({
                         var channel = pusher.subscribe(rainbowChannel);
 
                         channel.bind('click', function(data) {  //listens for 'chirp' events on my channel 'alert'
-                            console.log('====post pusher====');
-                            console.log('data: ');
-                            console.log(data);
 
                             var noSlash = ajaxSelect(data);
                             console.log('noslash: ');
                             console.log(noSlash);
-                            console.log('===================');
                             $(noSlash).toggleClass('catchadream');
 
                         });
@@ -88,17 +84,6 @@ window.bookmarklet({
                         if( !$(this).hasClass('badmofo') ) {
 
                             safeSelex = ajaxThis(this);
-                            //some logging
-                            console.log('====pre pusher this ====');
-                            console.log(' ');
-                            console.dir(this);
-                            console.log(' ');
-                            console.log('====pre pusher safeSelex ====');
-                            console.log(' ');
-                            console.dir(safeSelex);
-                            console.log(' ');
-                            console.log('=================');
-
 
                             $.ajax( {
                                 type: "POST",
@@ -156,9 +141,6 @@ function ajaxThis(ajaxyz){
                 attrTree += tagTerm + attributeS;
                 //build array of selectors leading to the object clicked on 
                 safeSelex[j] = attrTree;
-               // if(tagTerm == 'img'){
-                //    break;
-               // }
                 //set select level to parent of current level, to crawl up the DOM
                 selectLevel = selectLevel.parentNode;
                 j ++;
