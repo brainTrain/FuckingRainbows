@@ -140,7 +140,7 @@ function ajaxThis(ajaxyz){
                 //grab html tag type to handle custom tags
                 tagTerm = selectLevel.localName;
                 //grabs all attributes of the object, handles custom attributes 
-                if(selectLevel.attributes.length == 0 && tagTerm != 'body') {
+                if(selectLevel.attributes.length == 0) {
                     //if the object you click on has no attributes, we need to give it
                     //a blank one in order for the click to register
                     var attributeS = '[class=""]';
