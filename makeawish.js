@@ -151,7 +151,7 @@ function ajaxThis(ajaxyz){
             var contains = ajaxyz.textContent;
 
             //build the safe selector going from bodly, down to the object.. 
-            if(ajaxyz.localName == 'img') {
+            if(ajaxyz.localName == 'img' || ajaxyz.localName == 'body' ) {
                 safeSelex = "'" + safeSelex.reverse().join(' ') + "'"; 
             } else {
                 safeSelex = "'" + safeSelex.reverse().join(' ') +  ":contains(" + '"' + contains + '"' + ")'"; 
