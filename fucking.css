@@ -2,12 +2,20 @@ body {
     background-color: #3194c6;
 }
 
-.holdin_arches {
+
+.big_bow {
     position: relative;
+    width: 100%;
+    max-width: 900px;
+    min-width: 100px;
+    height: 40px;
+}
+.holdin_arches {
+    position: absolute;
     width: 100%;
 }
 .holdin_clouds {
-    position: relative;
+    position: absolute;
     width: 100%;
     top: 464px;
 }
@@ -57,12 +65,12 @@ body {
     min-width: 100px;
 }
 #right_arch {
-    position: relative;
+    position: absolute;
     margin-right: 15%;
     z-index: 6;
 }
 #left_arch {
-    position: relative;
+    position: absolute;
     margin-left: 1.9%;
     z-index: 6;
 }
