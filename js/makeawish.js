@@ -94,8 +94,8 @@ $(document).ready( function() {
 });
  
 function ajaxSelect(ajarx){
-    //remove escape character so quotes can be used
-    return ajarx.split('\\').join('');
+  //remove escape character so quotes can be used
+  return ajarx.split('\\').join('');
 }
 
 function ajaxThis(ajaxyz){

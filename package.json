@@ -1,0 +1,26 @@
+{
+  "name": "fuckingrainbows",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jquery-1.6.4.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": " postcss --use autoprefixer -o ./styles/rainbows.css ./build/style.css",
+    "css:demo": " postcss --use autoprefixer -o ./styles/fucking.css ./build/demo-style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brainTrain/fuckingrainbows.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brainTrain/fuckingrainbows/issues"
+  },
+  "homepage": "https://github.com/brainTrain/fuckingrainbows#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "postcss-cli": "^8.3.1"
+  }
+}
